@@ -1,5 +1,5 @@
 function hello() {
-  console.log('going old scrool!')
+  console.log('going old school!')
 }
 
 hello()
