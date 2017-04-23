@@ -1,14 +1,139 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-
-  <title>awitherow.github.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>awitherow</title>
   <meta name="description" content="my personal site">
-  <meta name="author" content="@azurikai">
+  <meta name="author" content="@awitherow">
 
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://use.fontawesome.com/8e07b27223.js"></script>
+  <style>
+    html {
+      background: linear-gradient(227deg, #ffffff, #f4f4f4);
+      background-size: 400% 400%;
+      -webkit-animation: fadeBg 52s ease infinite;
+      -moz-animation: fadeBg 52s ease infinite;
+      -o-animation: fadeBg 52s ease infinite;
+      animation: fadeBg 52s ease infinite;
+      @-webkit-keyframes fadeBg {
+        0% {
+          background-position: 0% 97%
+        }
+        50% {
+          background-position: 100% 4%
+        }
+        100% {
+          background-position: 0% 97%
+        }
+      }
+      @-moz-keyframes fadeBg {
+        0% {
+          background-position: 0% 97%
+        }
+        50% {
+          background-position: 100% 4%
+        }
+        100% {
+          background-position: 0% 97%
+        }
+      }
+      @-o-keyframes fadeBg {
+        0% {
+          background-position: 0% 97%
+        }
+        50% {
+          background-position: 100% 4%
+        }
+        100% {
+          background-position: 0% 97%
+        }
+      }
+      @keyframes fadeBg {
+        0% {
+          background-position: 0% 97%
+        }
+        50% {
+          background-position: 100% 4%
+        }
+        100% {
+          background-position: 0% 97%
+        }
+      }
+    }
+    
+    body {
+      color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a,
+    p {
+      font-weight: 300;
+    }
+    
+    .intro,
+    .social,
+    .work {
+      height: 100%;
+      min-height: 33vh;
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .intro h1 {
+      margin: 0;
+    }
+    
+    h2 {
+      font-size: 20px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social li {
+      display: inline-block;
+    }
+    
+    li {
+      margin: 8px;
+    }
+    
+    .social li a {
+      font-size: 24px;
+    }
+    
+    @media(min-width: 768px) {
+      body {
+        flex-direction: row;
+      }
+      .social ul li {
+        display: block;
+      }
+    }
+  </style>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -17,17 +142,62 @@
 
 <body>
 
-  <h1>Hello!</h1>
+  <div class="intro">
+    <h1>Hello and welcome!</h1>
+    <p>If you would like to get in touch or see some stuff...</p>
+  </div>
 
-  <h2>A major work in progress, here are some links for now.</h2>
+  <div class="social">
+    -
+    <ul>
+      <li>
+        <a target="_blank" href="https://github.com/awitherow?tab=repositories">
+          <i class="fa fa-github-alt" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://medium.com/@azurikai">
+          <i class="fa fa-medium" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/azurikai">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    -
+  </div>
 
-  <ul>
-    <li><a href="https://github.com/awitherow/">github</a></li>
-    <li><a href="https://medium.com/@azurikai">medium</a></li>
-    <li><a href="https://twitter.com/azurikai">twitter</a></li>
-  </ul>
+  <div class="work">
+    <h2>Recent Projects</h2>
+    <ul>
+      <li>
+        <a target="_blank" href="http://openrefuge.org">
+          Open Refuge
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://wing-chun-altona.surge.sh">
+          Wing Chun Altona
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="http://dev.immerundewig-tattooing.de/">
+          Immer Und Ewig Tattoo
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <!-- scripts -->
-  <script src="scripts.js"></script>
+  <script>
+    function hello() {
+      console.log('welcome!');
+    }
+
+    hello();
+  </script>
 </body>
+
 </html>
