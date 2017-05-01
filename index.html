@@ -9,10 +9,13 @@
   <meta name="description" content="my personal site">
   <meta name="author" content="@awitherow">
 
-  <script src="https://use.fontawesome.com/8e07b27223.js"></script>
+  <link async href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
   <style>
     html {
-      background: linear-gradient(227deg, #ffffff, #f4f4f4);
+      max-height: 100vh;
+      max-width: 100vw;
+      background: linear-gradient(227deg, #ffffff, #f9f9f9);
       background-size: 400% 400%;
       -webkit-animation: fadeBg 52s ease infinite;
       -moz-animation: fadeBg 52s ease infinite;
@@ -66,72 +69,122 @@
     
     body {
       color: grey;
-      font-family: Arial, Helvetica, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    a,
-    p {
-      font-weight: 300;
-    }
-    
-    .intro,
-    .social,
-    .work {
-      height: 100%;
-      min-height: 33vh;
-      max-width: 400px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      font-family: 'Lato', sans-serif;
+      position: relative;
+      max-width: 900px;
       margin: 0 auto;
-      text-align: center;
     }
     
-    .intro h1 {
+    .left,
+    .right {
+      position: absolute;
+      top: 24px;
+      bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    
+    .left {
+      left: 24px;
+    }
+    
+    .right {
+      right: 24px;
+      padding-top: 8px;
+      width: 50vw;
+      max-width: 250px;
+      text-align: right;
+    }
+    
+    .left,
+    .left h1,
+    .left h2,
+    .left h3,
+    .left a,
+    .right,
+    .right h1,
+    .right h2,
+    .right h3,
+    .right a {
+      font-weight: 300;
+      text-shadow: 1px 1px 1px #f1f1f1;
+    }
+    
+    .left h1,
+    .left h2,
+    .left h3,
+    .right h1,
+    .right h2,
+    .right h3 {
       margin: 0;
     }
     
-    h2 {
-      font-size: 20px;
+    .left h2,
+    .right h2 {
+      font-size: 16px;
     }
     
-    ul {
+    .left h3 {
+      font-size: 14px;
+    }
+    
+    .left ul,
+    .right ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
     
-    .social li {
+    .left ul.social {
+      padding: 0;
+    }
+    
+    .left ul.social li,
+    .right ul.skills li {
       display: inline-block;
     }
     
-    li {
-      margin: 8px;
+    .left ul.work {
+      padding: 0 12px;
+      margin-top: 8px;
     }
     
-    .social li a {
+    .left ul.work li {
+      font-size: 12px;
+      margin: 4px 0;
+    }
+    
+    img {
+      height: 48vh;
+      width: 48vh;
+      border-radius: 30vh;
+      box-shadow: 1px 1px 1px #f1f1f1;
+    }
+    
+    .right ul.skills {
+      text-align: right;
+      margin: 0;
+    }
+    
+    .right ul.skills li {
+      font-size: 12px;
+      margin-right: 2px;
+      margin-bottom: 6px;
+      border: 1px solid #f1f1f1;
+      padding: 4px 8px;
+    }
+    
+    .fa {
+      color: purple;
+    }
+    
+    .right .fa {
       font-size: 24px;
-    }
-    
-    @media(min-width: 768px) {
-      body {
-        flex-direction: row;
-      }
-      .social ul li {
-        display: block;
-      }
+      padding: 24px 12px;
     }
   </style>
 
@@ -142,52 +195,69 @@
 
 <body>
 
-  <div class="intro">
-    <h1>Hello and welcome!</h1>
-    <p>If you would like to get in touch or see some stuff...</p>
-  </div>
-
-  <div class="social">
-    -
-    <ul>
-      <li>
-        <a target="_blank" href="https://github.com/awitherow?tab=repositories">
-          <i class="fa fa-github-alt" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://medium.com/@azurikai">
-          <i class="fa fa-medium" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://twitter.com/azurikai">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-    -
-  </div>
-
-  <div class="work">
-    <h2>Recent Projects</h2>
-    <ul>
-      <li>
-        <a target="_blank" href="http://openrefuge.org">
+  <div class="left">
+    <div class="top">
+      <h1>AW</h1>
+      <h2>go easy</h2>
+      <ul class="social">
+        <li>
+          <a target="_blank" href="https://github.com/awitherow?tab=repositories">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://medium.com/@azurikai">
+            <i class="fa fa-medium" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/azurikai">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <h3>Projects</h3>
+      <ul class="work">
+        <li>
+          <a target="_blank" href="http://openrefuge.org">
           Open Refuge
         </a>
-      </li>
-      <li>
-        <a target="_blank" href="http://wing-chun-altona.surge.sh">
-          Wing Chun Altona
+        </li>
+        <li>
+          <a target="_blank" href="http://wing-chun-altona.surge.sh">
+          True Wing Chun
         </a>
-      </li>
-      <li>
-        <a target="_blank" href="http://dev.immerundewig-tattooing.de/">
+        </li>
+        <li>
+          <a target="_blank" href="http://dev.immerundewig-tattooing.de/">
           Immer Und Ewig Tattoo
         </a>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <img src="./photo.jpg" />
+
+  <div class="right">
+    <div class="top">
+      <ul class="skills">
+        <li>javascript</li>
+        <li>node</li>
+        <li>serverless</li>
+        <li>react.js</li>
+        <li>vue.js</li>
+        <li>react-native</li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <a href="mailto:au.witherow@gmail.com">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </a>
+    </div>
   </div>
 
   <!-- scripts -->
@@ -198,6 +268,7 @@
 
     hello();
   </script>
+  <script async src="https://use.fontawesome.com/8e07b27223.js"></script>
 </body>
 
 </html>
