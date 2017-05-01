@@ -149,6 +149,7 @@
     .left ul.social li,
     .right ul.skills li {
       display: inline-block;
+      padding: 0 4px;
     }
     
     .left ul.work {
@@ -162,10 +163,20 @@
     }
     
     img {
+      box-shadow: 1px 1px 1px #f1f1f1;
+    }
+    
+    .left img {
+      height: 100px;
+      width: 100px;
+    }
+    
+    .center img {
       height: 48vh;
       width: 48vh;
       border-radius: 30vh;
-      box-shadow: 1px 1px 1px #f1f1f1;
+      max-height: 375px;
+      max-width: 375px;
     }
     
     .right ul.skills {
@@ -173,12 +184,21 @@
       margin: 0;
     }
     
-    .right ul.skills li {
-      font-size: 12px;
+    .right ul.skills li,
+    .button-link {
       margin-right: 2px;
       margin-bottom: 6px;
       border: 1px solid #f1f1f1;
       padding: 4px 8px;
+    }
+    
+    .right ul.skills li {
+      font-size: 12px;
+    }
+    
+    .button-link {
+      text-decoration: none;
+      color: black;
     }
     
     .fa {
@@ -188,6 +208,62 @@
     .right .fa {
       font-size: 24px;
       padding: 12px 0;
+    }
+    
+    .center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .center img {
+      display: none;
+    }
+    
+    .center .intro {
+      font-size: 80%;
+      padding: 24px 24px 0 24px;
+    }
+    
+    .center .intro,
+    .center .intro h1 {
+      font-weight: 300;
+    }
+    
+    @media(min-width: 400px) {
+      .left img {
+        height: 125px;
+        width: 125px;
+      }
+      .center .intro {
+        padding-top: 48px;
+      }
+    }
+    
+    @media(min-width: 768px) {
+      .left img {
+        display: none;
+      }
+      .center {
+        max-width: 700px;
+      }
+      .center img {
+        display: block;
+      }
+      .center .intro {
+        font-size: 100%;
+        display: block;
+        margin-left: 24px;
+      }
+    }
+    
+    @media(min-width: 1024px) {
+      .center {
+        max-width: 900px;
+      }
+      .center .intro {
+        display: block;
+      }
     }
   </style>
 
@@ -200,7 +276,6 @@
 
   <div class="left">
     <div class="top">
-      <h1>AW</h1>
       <ul class="social">
         <li>
           <a target="_blank" href="https://github.com/awitherow?tab=repositories">
@@ -208,16 +283,12 @@
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://medium.com/@azurikai">
-            <i class="fa fa-medium" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://twitter.com/azurikai">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+          <a target="_blank" href="https://www.linkedin.com/in/austinwitherow/">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
+      <img src="./photo.jpg" />
     </div>
     <div class="bottom">
       <h3>Projects</h3>
@@ -242,7 +313,22 @@
   </div>
 
 
-  <img src="./photo.jpg" />
+  <div class="center">
+    <img src="./photo.jpg" />
+    <div class="intro">
+      <h1>Hello,</h1>
+      <p>my name is Austin Witherow.</p>
+      <p>I am passionate about making meaningful impact with simple digital strategies.</p>
+      <p>Some of my past time enjoyments include yoga, reading, bike rides, bouldering, baking/eating cake and various indoor
+        gardening projects.</p>
+      <p>Let me know about any dreams you want to achieve. Maybe I can help.</p>
+      <p>
+        <a class="button-link" href="mailto:au.witherow@gmail.com">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i> Email Me
+        </a>
+      </p>
+    </div>
+  </div>
 
   <div class="right">
     <div class="top">
@@ -254,11 +340,6 @@
         <li>vue.js</li>
         <li>react-native</li>
       </ul>
-    </div>
-    <div class="bottom">
-      <a href="mailto:au.witherow@gmail.com">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-      </a>
     </div>
   </div>
 
