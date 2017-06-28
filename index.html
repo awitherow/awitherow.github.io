@@ -12,260 +12,7 @@
   <link async href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
   <link rel="manifest" href="manifest.json">
-
-  <style>
-    html {
-      max-height: 100vh;
-      max-width: 100vw;
-      background: linear-gradient(227deg, #ffffff, #f9f9f9);
-      background-size: 400% 400%;
-      -webkit-animation: fadeBg 52s ease infinite;
-      -moz-animation: fadeBg 52s ease infinite;
-      -o-animation: fadeBg 52s ease infinite;
-      animation: fadeBg 52s ease infinite;
-      @-webkit-keyframes fadeBg {
-        0% {
-          background-position: 0% 97%
-        }
-        50% {
-          background-position: 100% 4%
-        }
-        100% {
-          background-position: 0% 97%
-        }
-      }
-      @-moz-keyframes fadeBg {
-        0% {
-          background-position: 0% 97%
-        }
-        50% {
-          background-position: 100% 4%
-        }
-        100% {
-          background-position: 0% 97%
-        }
-      }
-      @-o-keyframes fadeBg {
-        0% {
-          background-position: 0% 97%
-        }
-        50% {
-          background-position: 100% 4%
-        }
-        100% {
-          background-position: 0% 97%
-        }
-      }
-      @keyframes fadeBg {
-        0% {
-          background-position: 0% 97%
-        }
-        50% {
-          background-position: 100% 4%
-        }
-        100% {
-          background-position: 0% 97%
-        }
-      }
-    }
-    
-    body {
-      color: grey;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Lato', sans-serif;
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .left,
-    .right {
-      position: absolute;
-      top: 24px;
-      bottom: 24px;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-    }
-    
-    .left {
-      left: 24px;
-    }
-    
-    .right {
-      right: 24px;
-      padding-top: 8px;
-      width: 50vw;
-      max-width: 250px;
-      text-align: right;
-    }
-    
-    .left,
-    .left h1,
-    .left h2,
-    .left h3,
-    .left a,
-    .right,
-    .right h1,
-    .right h2,
-    .right h3,
-    .right a {
-      font-weight: 300;
-      text-shadow: 1px 1px 1px #f1f1f1;
-    }
-    
-    .left h1,
-    .left h2,
-    .left h3,
-    .right h1,
-    .right h2,
-    .right h3 {
-      margin: 0;
-    }
-    
-    .left h2,
-    .right h2 {
-      font-size: 16px;
-    }
-    
-    .left h3 {
-      font-size: 14px;
-    }
-    
-    .left ul,
-    .right ul {
-      list-style: none;
-    }
-    
-    .left ul.social {
-      padding: 0;
-      margin-top: 8px;
-    }
-    
-    .left ul.social li,
-    .right ul.skills li {
-      display: inline-block;
-      padding: 0 4px;
-    }
-    
-    .left ul.work {
-      padding: 0 12px;
-      margin-top: 8px;
-    }
-    
-    .left ul.work li {
-      font-size: 12px;
-      margin: 4px 0;
-    }
-    
-    img {
-      box-shadow: 1px 1px 1px #f1f1f1;
-    }
-    
-    .left img {
-      height: 100px;
-      width: 100px;
-    }
-    
-    .center img {
-      height: 48vh;
-      width: 48vh;
-      border-radius: 30vh;
-      max-height: 375px;
-      max-width: 375px;
-    }
-    
-    .right ul.skills {
-      text-align: right;
-      margin: 0;
-    }
-    
-    .right ul.skills li,
-    .button-link {
-      margin-right: 2px;
-      margin-bottom: 6px;
-      border: 1px solid #f1f1f1;
-      padding: 4px 8px;
-    }
-    
-    .right ul.skills li {
-      font-size: 12px;
-    }
-    
-    .button-link {
-      text-decoration: none;
-      color: black;
-    }
-    
-    .fa {
-      color: purple;
-    }
-    
-    .right .fa {
-      font-size: 24px;
-      padding: 12px 0;
-    }
-    
-    .center {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    
-    .center img {
-      display: none;
-    }
-    
-    .center .intro {
-      font-size: 80%;
-      padding: 24px 24px 0 24px;
-    }
-    
-    .center .intro,
-    .center .intro h1 {
-      font-weight: 300;
-    }
-    
-    @media(min-width: 400px) {
-      .left img {
-        height: 125px;
-        width: 125px;
-      }
-      .center .intro {
-        padding-top: 48px;
-      }
-    }
-    
-    @media(min-width: 768px) {
-      .left img {
-        display: none;
-      }
-      .center {
-        max-width: 700px;
-      }
-      .center img {
-        display: block;
-      }
-      .center .intro {
-        font-size: 100%;
-        display: block;
-        margin-left: 24px;
-      }
-    }
-    
-    @media(min-width: 1024px) {
-      .center {
-        max-width: 900px;
-      }
-      .center .intro {
-        display: block;
-      }
-    }
-  </style>
+  <link href="./styles.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -273,6 +20,34 @@
 </head>
 
 <body>
+
+  <div class="overlay">
+    <div class="inner">
+      <div class="header">
+        <h1>Hello!</h1>
+        <button onclick="closeOverlay()">
+        <i class="fa fa fa-times" aria-hidden="true"></i>
+      </button>
+      </div>
+      <div class="body">
+        <h2>Hope I didn't frighten you... but I just have to ask... Are you interested in any of the below?</h2>
+        <ul>
+          <li>Bitcoin,</li>
+          <li>Cryptocurrency,</li>
+          <li>Beta testing software,</li>
+          <li>Increasing your money making potential?</li>
+        </ul>
+        <h2>If so...</h2>
+        <p>I am running a soft beta launch for a program I am using to keep on top of the cryptocoin (Bitcoin, Litecoin, Ethereum)
+          market. I think it might be helpful for you too, so I want to spread the love and learn a bit about how I can make
+          it better. If you're interested, </p>
+        <div class="button-container">
+          <a class="button green" href="https://goo.gl/forms/yiCsE3rHyxLE6xR12" target="_blank">Sign Up</a>
+          <a class="button" href="https://awitherow.github.io/coinbot/" target="_blank">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="left">
     <div class="top">
@@ -293,6 +68,11 @@
     <div class="bottom">
       <h3>Projects</h3>
       <ul class="work">
+        <li>
+          <a target="_blank" href="https://awitherow.github.io/coinbot/">
+          Coinbot
+        </a>
+        </li>
         <li>
           <a target="_blank" href="http://openrefuge.org">
           Open Refuge
@@ -335,7 +115,6 @@
       <ul class="skills">
         <li>javascript</li>
         <li>node</li>
-        <li>serverless</li>
         <li>react.js</li>
         <li>vue.js</li>
         <li>react-native</li>
@@ -345,11 +124,21 @@
 
   <!-- scripts -->
   <script>
+    const overlay = document.getElementsByClassName('overlay')[0]
     function hello() {
       console.log('welcome!');
     }
 
+    function openOverlay() {
+      overlay.className += " visible"
+    }
+
+    function closeOverlay() {
+      overlay.className = overlay.className.replace(' visible', '')
+    }
+
     hello();
+    setTimeout(openOverlay, 5000);
   </script>
   <script async src="https://use.fontawesome.com/8e07b27223.js"></script>
 </body>
