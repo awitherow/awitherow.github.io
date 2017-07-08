@@ -78,9 +78,15 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.975);
   z-index: 9;
   padding: 24px;
+}
+
+.overlay,
+.overlay h1 {
+  font-weight: 300;
+  line-height: 132%;
 }
 
 .overlay .inner {
@@ -103,20 +109,6 @@ button {
 .button-container {
   margin-top: 32px;
   height: 50px;
-}
-
-.button {
-  border: 1px solid grey;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  color: grey;
-  text-decoration: none;
-}
-
-.button.green {
-  background: green;
-  border: 1px solid darkgreen;
-  color: white;
 }
 
 .overlay.visible {
@@ -196,6 +188,10 @@ button {
   padding: 0 4px;
 }
 
+ul.skills {
+  padding: 0;
+}
+
 .left ul.work {
   padding: 0 12px;
   margin-top: 8px;
@@ -233,7 +229,7 @@ img {
   margin-right: 2px;
   margin-bottom: 6px;
   border: 1px solid #f1f1f1;
-  padding: 4px 8px;
+  padding: 8px 16px;
 }
 
 .right ul.skills li {
@@ -241,8 +237,15 @@ img {
 }
 
 .button-link {
+  text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: #49a942;
+  border: 1px solid #34bf49;
+}
+
+.button-link.secondary {
+  color: darkslategray;
+  border: 1px solid darkgrey;
 }
 
 .fa {
