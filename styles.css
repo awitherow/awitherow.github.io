@@ -111,6 +111,10 @@ button {
   height: 50px;
 }
 
+.button-container .button {
+  margin-right: 8px;
+}
+
 .overlay.visible {
   display: flex;
   align-items: center;
@@ -225,7 +229,7 @@ img {
 }
 
 .right ul.skills li,
-.button-link {
+.button {
   margin-right: 2px;
   margin-bottom: 6px;
   border: 1px solid #f1f1f1;
@@ -236,14 +240,14 @@ img {
   font-size: 12px;
 }
 
-.button-link {
+.button {
   text-transform: uppercase;
   text-decoration: none;
   color: #49a942;
   border: 1px solid #34bf49;
 }
 
-.button-link.secondary {
+.button.secondary {
   color: darkslategray;
   border: 1px solid darkgrey;
 }
