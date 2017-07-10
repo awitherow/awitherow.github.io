@@ -115,8 +115,7 @@
       <ul class="skills">
         <li>javascript</li>
         <li>node</li>
-        <li>react.js</li>
-        <li>vue.js</li>
+        <li>react</li>
         <li>react-native</li>
       </ul>
     </div>
@@ -130,11 +129,11 @@
     }
 
     function openOverlay() {
-      overlay.className += " visible"
+      overlay.className += " visible fadeIn"
     }
 
     function closeOverlay() {
-      overlay.className = overlay.className.replace(' visible', '')
+      overlay.className = overlay.className.replace(' visible fadeIn', '')
     }
 
     hello();
