@@ -194,6 +194,7 @@ img {
   display: flex;
   align-items: center;
   padding: 24px 0;
+  overflow-y: scroll;
 }
 
 .center .intro {
@@ -224,10 +225,8 @@ img {
 .skills {
   text-align: right;
   max-height: 100px;
-  overflow-y: scroll;
   padding-right: 16px;
 }
-
 
 .skills ul {
   margin: 4px 0;
