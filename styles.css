@@ -173,6 +173,11 @@ a {
   border: 1px solid darkgrey;
 }
 
+.button.special {
+  color: firebrick;
+  border: 1px solid red;
+}
+
 .fa {
   color: purple;
   font-size: 24px;
@@ -188,7 +193,7 @@ img {
 }
 
 .box {
-  box-shadow: 0 0 8px 8px white;
+  box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.5);
 
   width: 100%;
   display: flex;
