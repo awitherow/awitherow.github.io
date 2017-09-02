@@ -122,6 +122,25 @@ button {
 .button-container {
   margin-top: 32px;
   display: flex;
+  flex-wrap: 1;
+}
+
+.overlay .button-container {
+  flex-direction: column;
+}
+
+.overlay .button-container .button {
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .overlay .button-container {
+    flex-direction: row;
+  }
+
+  .overlay .button-container .button {
+    margin-top: 0;
+  }
 }
 
 .button-container .button {
