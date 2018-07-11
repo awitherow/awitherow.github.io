@@ -1,3 +1,250 @@
-img {
-  width: 250px;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #5ecc62;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 140%;
+}
+
+.separator {
+  background: #5ecc62;
+  width: 100px;
+  height: 2px;
+  margin: 4px 0;
+}
+
+.separator.dark {
+  background: #2a2a2a;
+}
+
+.header {
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header h1,
+.header h2,
+.header ul li a {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.header h1 {
+  font-weight: 500;
+}
+
+.header h2 {
+  font-size: 100%;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.header ul li {
+  display: inline;
+  padding-right: 8px;
+}
+
+.header ul li a {
+  text-decoration: none;
+}
+
+.header ul li a:hover {
+  color: #5ecc62;
+}
+
+.intro {
+  height: 100vh;
+  background: url("bg-dark.jpg") no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: white;
+}
+
+.intro .description {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 24px;
+}
+
+.intro h3 {
+  font-size: 200%;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.intro p {
+  padding: 0;
+  margin: 8px 8px 12px 8px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.button {
+  padding: 8px 16px;
+  margin: 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #5ecc62;
+  border-color: #5ecc62;
+}
+
+.programming,
+.yoga,
+.about {
+  padding: 0px 64px;
+}
+
+.programming h4,
+.yoga h4,
+.programming p,
+.yoga p {
+  color: white;
+}
+
+.about {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 64px;
+  background-color: #2a2a2a;
+}
+
+.about h4 {
+  color: white;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.about h5 {
+  font-size: 140%;
+  margin: 16px auto 8px auto;
+  padding: 0;
+}
+
+.about img {
+  width: 240px;
+  border-radius: 120px;
+}
+
+.about a:visited {
+  color: #fff200;
+}
+
+.about .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .description .paragraphs {
+  margin-left: 24px;
+  color: white;
+  line-height: 26px;
+}
+
+.about .grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.about .grid .pane {
+  margin: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 24px;
+}
+
+.about .grid .pane img {
+  width: 160px;
+}
+
+.programming {
+  height: 100vh;
+  background: url("programming.jpg") no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.yoga {
+  height: 100vh;
+  background: url("peace.jpg") no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
