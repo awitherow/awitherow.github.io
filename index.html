@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AW</title>
+    <title>Austin Witherow Online | Programming And Yoga</title>
     <meta name="description" content="my personal site">
     <meta name="author" content="@awitherow">
 
@@ -13,11 +13,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
     <link rel="manifest" href="manifest.json">
     <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
 </head>
 
 <body>
 
-    <nav class="header" id="header">
+    <nav class="header" id="customHeader">
         <div class="title">
             <h1>Austin Witherow</h1>
             <div class="separator"></div>
@@ -43,12 +45,12 @@
     <div class="intro">
         <div class="description">
             <h3>Welcome</h3>
-            <p>I'm Austin, and I'm here to help you fulfil your potential, whether it be through programming assistance or on
-                your spiritual path.</p>
+            <p>I'm Austin, and I'm here to help you fulfil your potential, whether it be through digital assistance or on your
+                spiritual journey with Yoga.</p>
         </div>
         <div class="button-container">
             <a href="#programming" data-scroll class="button">Quality Programming Solutions</a>
-            <a href="#yoga" data-scroll class="button">Spiritual Reintegration</a>
+            <a href="#yoga" data-scroll class="button">Spiritual Reintegration with Yoga</a>
         </div>
     </div>
 
@@ -75,8 +77,9 @@
                     Since graduating with my degree in Applied Information Technology with Business and Web Development concentrations, I have
                     worked as a graphic designer and web developer in America and Germany with over 5 years of experience.
                     I am now working with individuals and small businesses to bring quality into the world at minimal costs.
-                    You can view my latest copy of my curriculum vitae at this link for a detailed overview of my experience,
-                    or the social links below for code samples and my business connections.
+                    You can view my latest copy of my
+                    <a href="cv.pdf" target="_blank">curriculum vitae</a> for a detailed overview of my experience, or the social links below for code samples
+                    and my business connections.
                 </p>
             </div>
             <div class="pane">
@@ -95,6 +98,19 @@
                 </p>
             </div>
         </div>
+        <div class="separator"></div>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.linkedin.com/in/austinwitherow/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.github.com/awitherow/">
+                    <i class="fab fa-github-alt"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 
     <div id="programming" class="programming">
@@ -126,12 +142,10 @@
     </footer>
 
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" />
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
     </script>
-    <script async src="./script.js" />
-    <script async src="https://use.fontawesome.com/8e07b27223.js"></script>
 </body>
 
 </html>
