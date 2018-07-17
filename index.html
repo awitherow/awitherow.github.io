@@ -5,25 +5,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Austin Witherow Online | Programming And Yoga</title>
+    <title>AW</title>
     <meta name="description" content="my personal site">
     <meta name="author" content="@awitherow">
 
     <link async href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
     <link rel="manifest" href="manifest.json">
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/animate.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
 </head>
 
 <body>
 
+    <div id="mobileMenu">
+        <button id="closeButton">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#">Home</a>
+        <a href="https://awitherow.github.io/blog/" target="_blank">Blog</a>
+        <a href="#programming">Programming</a>
+        <a href="#yoga">Yoga</a>
+        <a class="button" href="#consult">Free Consulting</a>
+    </div>
+
     <nav class="header" id="customHeader">
         <div class="title">
-            <h1>Austin Witherow</h1>
-            <div class="separator"></div>
-            <h2>Programming, Yoga and More</h2>
+            <h1>AW</h1>
         </div>
 
         <ul>
@@ -39,14 +49,21 @@
             <li>
                 <a href="#yoga">Yoga</a>
             </li>
+            <li>
+                <a class="button" href="#consult">Free Consulting</a>
+            </li>
         </ul>
+
+        <button id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <div class="intro">
         <div class="description">
-            <h3>Welcome</h3>
-            <p>I'm Austin, and I'm here to help you fulfil your potential, whether it be through digital assistance or on your
-                spiritual journey with Yoga.</p>
+            <p>Let's work together to fulfill your dreams, whether it be through
+                <strong>quality technical solutions</strong> or your personal evolution through
+                <strong>yoga, mindfulness and meditation</strong>, I'm here to help.</p>
         </div>
         <div class="button-container">
             <a href="#programming" data-scroll class="button">Quality Programming Solutions</a>
@@ -56,7 +73,7 @@
 
     <div class="about">
         <div class="description">
-            <img src="photo.jpg" />
+            <img src="./img/photo.jpg" />
             <div class="paragraphs">
                 <h4>Get To Know Me</h4>
                 <div class="separator"></div>
@@ -71,19 +88,19 @@
         </div>
         <div class="grid">
             <div class="pane">
-                <img src="robot.png" />
+                <img src="./img/robot.png" />
                 <h5>Technical Proficiencies</h5>
                 <p>
                     Since graduating with my degree in Applied Information Technology with Business and Web Development concentrations, I have
                     worked as a graphic designer and web developer in America and Germany with over 5 years of experience.
                     I am now working with individuals and small businesses to bring quality into the world at minimal costs.
                     You can view my latest copy of my
-                    <a href="cv.pdf" target="_blank">curriculum vitae</a> for a detailed overview of my experience, or the social links below for code samples
+                    <a href="./files/cv.pdf" target="_blank">curriculum vitae</a> for a detailed overview of my experience, or the social links below for code samples
                     and my business connections.
                 </p>
             </div>
             <div class="pane">
-                <img src="prayer-hands.png" />
+                <img src="./img/prayer-hands.png" />
                 <h5>Yoga and Spirituality</h5>
                 <p>
                     At the age of 18 upon getting accepted into George Mason on my swimming scholarship, I began looking up competitive edges
@@ -142,8 +159,9 @@
     </footer>
 
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" />
-    <script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script type="text/javascript" src="./scripts/scripts.js"></script>
+    <script type="text/javascript">
         var scroll = new SmoothScroll('a[href*="#"]');
     </script>
 </body>
