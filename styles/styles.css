@@ -8,18 +8,21 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #5ecc62;
+  background: #2f323a;
 }
 
 html,
-body,
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Lato", Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h4 {
@@ -34,7 +37,7 @@ h4 {
 }
 
 .separator.dark {
-  background: #2a2a2a;
+  background: #353a47;
 }
 
 #mobileMenu {
@@ -73,6 +76,7 @@ h4 {
 }
 
 .header {
+  position: absolute;
   padding: 24px;
   display: flex;
   align-items: center;
@@ -99,6 +103,7 @@ h4 {
 .header ul {
   display: none;
   list-style: none;
+  margin-left: auto;
 }
 
 .header #hamburger {
@@ -131,8 +136,12 @@ h4 {
   color: #5ecc62;
 }
 
+.header a.button {
+  padding: 4px 8px !important;
+}
+
 .intro {
-  height: 80vh;
+  height: 100vh;
   background: url("../img/bg-dark.jpg") no-repeat center center fixed;
 
   -webkit-background-size: cover;
@@ -146,13 +155,15 @@ h4 {
   flex-direction: column;
 
   color: white;
+  padding: 16px;
 }
 
 .intro p {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  line-height: 24px;
+  line-height: 36px;
+  font-size: 24px;
 }
 
 .intro h3 {
@@ -169,8 +180,22 @@ h4 {
 .button-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
+}
+
+.button-container.left {
+  justify-content: flex-start;
+}
+
+.button-container.left .button {
+  margin-left: 0;
+}
+
+button.button {
+  background: #5ecc62;
+  font-size: 16px;
+  border-color: #5ecc62;
 }
 
 .button {
@@ -180,6 +205,7 @@ h4 {
   border-radius: 4px;
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
 .button:hover {
@@ -208,7 +234,7 @@ h4 {
   justify-content: center;
   flex-direction: column;
   padding: 64px;
-  background-color: #2a2a2a;
+  background-color: #353a47;
 }
 
 .about h4 {
@@ -233,7 +259,7 @@ h4 {
 }
 
 .about a:visited {
-  color: #fff200;
+  color: #77567a;
 }
 
 .about .description {
@@ -319,4 +345,5 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
 }
