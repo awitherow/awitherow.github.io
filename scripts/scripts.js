@@ -22,6 +22,17 @@
   }
 
   console.log("mobileMenu children on standby.");
+
+  var consultingButtons = document.getElementsByClassName("consultingButton");
+  for (var i = 0; i < consultingButtons.length; i++) {
+    consultingButtons[i].addEventListener("click", openConsulting);
+  }
+
+  console.log("consultingButtons on standby.");
+
+  var closeConsultingButton = document.getElementById("closeConsulting");
+  closeConsultingButton.addEventListener("click", closeConsulting);
+  console.log("closeConsultingButton on standby.");
 })();
 
 // 1. mobile menu handlers
@@ -42,41 +53,30 @@ function closeMenu() {
   }, 500);
 }
 
-// 2. scrollenabler, disabler
-
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault) e.preventDefault();
-  e.returnValue = false;
-}
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
+// 2. scroll enable/disable
 function disableScroll() {
-  console.log("disabling scroll");
-  if (window.addEventListener)
-    // older FF
-    window.addEventListener("DOMMouseScroll", preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove = preventDefault; // mobile
-  document.onkeydown = preventDefaultForScrollKeys;
+  document.getElementsByTagName("body")[0].classList.add("noScroll");
 }
 
 function enableScroll() {
-  if (window.removeEventListener)
-    window.removeEventListener("DOMMouseScroll", preventDefault, false);
-  window.onmousewheel = document.onmousewheel = null;
-  window.onwheel = null;
-  window.ontouchmove = null;
-  document.onkeydown = null;
+  document.getElementsByTagName("body")[0].classList.remove("noScroll");
+}
+
+// 3. consulting window popup
+function openConsulting() {
+  console.log(this);
+  disableScroll();
+  console.log("opening consultingPopup");
+  var consultingPopup = document.getElementById("consultingPopup");
+  consultingPopup.classList.add("bounceIn", "shown");
+}
+
+function closeConsulting() {
+  enableScroll();
+  console.log("closing consultingPopup");
+  var consultingPopup = document.getElementById("consultingPopup");
+  consultingPopup.classList.add("fadeOut");
+  setTimeout(function() {
+    consultingPopup.classList.remove("shown", "bounceIn", "fadeOut");
+  }, 500);
 }

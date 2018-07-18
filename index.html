@@ -23,7 +23,7 @@
     <div class="wip">WORK IN PROGRESS, NOT EVERYTHING WORKING YET ;)</div>
 
     <div id="mobileMenu">
-        <button id="closeButton">
+        <button class="closeButton" id="closeMenu">
             <i class="fas fa-times"></i>
         </button>
         <a href="#">Home</a>
@@ -31,7 +31,37 @@
         <a href="#about">About</a>
         <a href="#programming">Programming</a>
         <a href="#yoga">Yoga</a>
-        <a class="button" href="#consult">Free Consulting</a>
+        <button data-type="" class="button consultingButton" href="#consult">Free Consulting</button>
+    </div>
+
+    <div id="consultingPopup">
+        <button class="closeButton" id="closeConsulting">
+            <i class="fas fa-times"></i>
+        </button>
+        <form>
+            <fieldset>
+                <label>Name:</label>
+                <input id="" type="text" />
+            </fieldset>
+            <fieldset>
+                <label>Email:</label>
+                <input id="" type="email" />
+            </fieldset>
+            <fieldset>
+                <label>Topic of Consulting</label>
+                <select id="consultTopic">
+                    <option value="yoga">Yoga</option>
+                    <option value="meditation">Meditation</option>
+                    <option value="mindfulness">Mindfulness</option>
+                    <option value="programming">Web and Application Development</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label>Details:</label>
+                <textarea id=""></textarea>
+            </fieldset>
+            <button class="button">Submit</button>
+        </form>
     </div>
 
     <nav class="header" id="customHeader">
@@ -53,7 +83,7 @@
                 <a href="#yoga">Yoga</a>
             </li>
             <li>
-                <a class="button" href="#consult">Contact</a>
+                <a data-type="" class="button consultingButton" href="#consult">Contact</a>
             </li>
             <li>
                 <a href="https://awitherow.github.io/blog/" target="_blank">Blog</a>
@@ -73,7 +103,7 @@
                 <strong>Yoga, Mindfulness and Spirituality</strong>.</p>
         </div>
         <div class="button-container">
-            <button class="button primary">Free Consulting</button>
+            <button data-type="" class="button primary consultingButton">Free Consulting</button>
             <a href="#about" data-scroll class="button">Get To Know Me</a>
         </div>
     </div>
@@ -91,7 +121,9 @@
                     captain of the team for 3 of my 4 years, and a recipient of over 14 medals through hard work and commitment
                     to success.
                 </p>
-                <p>Since then ...</p>
+                <p>Since then, I've been working on developing my Professional Skillset which focus on
+                    <strong>Web and Application Development</strong> and
+                    <strong>Yoga, Mindfulness and Meditation</strong>.</p>
             </div>
         </div>
     </div>
@@ -165,7 +197,7 @@
                 <strong>free consulting</strong>, and we will get the job done in a
                 <strong>lean, beautiful and cost efficient</strong> manner!</p>
             <div class="button-container">
-                <a href="#" class="button primary" target="_blank">Free Consulting</a>
+                <button data-type="programming" class="button primary consultingButton" target="_blank">Free Consulting</button>
                 <a href="#" class="button" target="_blank">Satisfied Clients</a>
             </div>
         </div>
@@ -186,7 +218,7 @@
             <p class="description">If you're interested in finding answers to the questions above and are ready to progress with your personal evolution,
                 reach out today and don't let fear hold you back.</p>
             <div class="button-container">
-                <a class="button primary">Reach Out Today</a>
+                <button data-type="yoga" class="button primary consultingButton">Reach Out Today</button>
                 <a class="button">Qualifications</a>
             </div>
         </div>

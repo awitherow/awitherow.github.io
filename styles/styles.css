@@ -16,6 +16,10 @@ body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
+body.noScroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -26,6 +30,11 @@ h5 {
 
 h4 {
   font-size: 140%;
+}
+
+button,
+p {
+  font-weight: 100;
 }
 
 .wip {
@@ -49,13 +58,15 @@ h4 {
   background: #353a47;
 }
 
-#mobileMenu {
+#mobileMenu,
+#consultingPopup {
   display: none;
   z-index: 2;
 }
 
-#mobileMenu.shown {
-  position: absolute;
+#mobileMenu.shown,
+#consultingPopup.shown {
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -67,16 +78,85 @@ h4 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  overflow-y: scroll;
 }
 
-#mobileMenu a {
+#consultingPopup.shown {
+  padding-top: 80px;
+  justify-content: flex-start;
+}
+
+#consultingPopup form {
+  width: 80%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+#consultingPopup form fieldset {
+  margin-bottom: 12px;
+}
+
+#consultingPopup form fieldset,
+#consultingPopup form fieldset input,
+#consultingPopup form fieldset textarea,
+#consultingPopup form fieldset select {
+  width: 96%;
+}
+
+#consultingPopup form fieldset {
+  border: none;
+  padding: 0;
+  margin: 6px;
+}
+
+#consultingPopup form fieldset label {
+  display: block;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#consultingPopup form fieldset input,
+#consultingPopup form fieldset textarea,
+#consultingPopup form fieldset select,
+#consultingPopup form fieldset select option {
+  padding: 6px 12px;
+  font-size: 16px;
+  border: none;
+  font-weight: 100;
+}
+
+#consultingPopup form fieldset textarea {
+  height: 240px;
+}
+
+#consultingPopup form button {
+  font-size: 18px;
+}
+
+#consultingPopup form button:hover {
+  color: #353a47;
+  border-color: #353a47;
+}
+
+@media (min-width: 768px) {
+  #consultingPopup.shown {
+    justify-content: center;
+  }
+}
+
+#mobileMenu a,
+#consultingPopup a {
   color: white;
   text-decoration: none;
   padding: 8px;
   font-size: 24px;
 }
 
-#mobileMenu #closeButton {
+#mobileMenu .closeButton,
+#consultingPopup .closeButton {
   position: absolute;
   z-index: 2;
   top: 24px;
@@ -333,8 +413,8 @@ button {
 
 #about .description {
   display: flex;
-  align-items: center;
-  justify-content: flex-starts;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
 }
