@@ -28,6 +28,16 @@ h4 {
   font-size: 140%;
 }
 
+.wip {
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .separator {
   background: #5ecc62;
   width: 100px;
