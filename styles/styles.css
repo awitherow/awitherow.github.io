@@ -14,7 +14,6 @@ body {
 html,
 body {
   font-family: "Lato", Arial, Helvetica, sans-serif;
-  font-weight: 300;
 }
 
 h1,
@@ -182,11 +181,21 @@ h4 {
   margin: 8px 8px 12px 8px;
 }
 
+button {
+  background: none;
+  border-width: 0;
+  font-weight: 100 !important;
+}
+
 .button-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+}
+
+.button-container .button:first-of-type {
+  margin-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -206,10 +215,12 @@ h4 {
 .button {
   padding: 6px 12px;
   margin: 8px;
+  border-width: 1px !important;
   border: 1px solid white;
   text-decoration: none;
   color: white;
   text-align: center;
+  font-weight: 100 !important;
 }
 
 .button:hover {
@@ -231,7 +242,8 @@ h4 {
 
 .programming,
 .yoga,
-#about {
+#about,
+#skills {
   padding: 0px 64px;
 }
 
@@ -242,40 +254,55 @@ h4 {
   color: white;
 }
 
-#about {
+#about,
+#skills {
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 16px;
-  background-color: #353a47;
+  padding: 64px;
 }
 
-#about h4 {
+#about {
+  background-color: #5ecc62;
+}
+
+#about h4,
+#skills h4 {
   color: white;
   padding: 0;
   margin: 0 0 16px 0;
   font-size: 140%;
 }
 
-#about h5 {
+#about h5,
+#skills h5 {
   font-size: 120%;
   margin: 16px auto 8px auto;
   padding: 0;
   text-align: center;
 }
 
+#about h4,
+#skills h4,
+#about h5,
+#skills h5 {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
-  #about h5 {
-    text-align: justify;
+  #about h4,
+  #skills h4,
+  #about h5,
+  #skills h5 {
+    text-align: left;
   }
 }
 
 #about img {
   width: 240px;
-  border-radius: 120px;
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 @media (min-width: 768px) {
@@ -284,73 +311,74 @@ h4 {
   }
 }
 
-#about a {
+#about a,
+#skills a {
   color: #5ecc62;
 }
 
-#about a:visited {
+#about a:visited,
+#skills a:visited {
   color: #77567a;
 }
 
 #about .description {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-starts;
   flex-direction: column;
   text-align: center;
 }
 
-#about .description .separator {
+#about .description .separator,
+.service .separator {
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  #about .description .separator {
+  #about .description .separator,
+  .service .separator {
     margin: 0;
   }
+
   #about .description {
-    text-align: justify;
-    margin-bottom: 64px;
+    text-align: left;
   }
 }
 
 @media (min-width: 768px) {
-  #about {
-    padding: 64px;
-  }
-
   #about .description {
     flex-direction: row;
   }
 }
 
-#about .description .paragraphs {
+#about .description .paragraphs,
+#skills .description .paragraphs {
   color: white;
   line-height: 26px;
 }
 
 @media (min-width: 768px) {
-  #about .description .paragraphs {
+  #about .description .paragraphs,
+  #skills .description .paragraphs {
     margin-left: 24px;
   }
 }
 
-#about .grid {
+#skills .grid {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 64px;
+  margin-top: 24px;
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  #about .grid {
+@media (min-width: 1024px) {
+  #skills .grid {
     flex-direction: row;
   }
 }
 
-#about .grid .pane {
-  margin: 16px;
+#skills .grid .pane {
   color: white;
   display: flex;
   align-items: center;
@@ -359,61 +387,80 @@ h4 {
   line-height: 24px;
 }
 
-#about .grid .pane img {
+@media (min-width: 768px) {
+  #skills .grid .pane {
+    margin: 16px;
+  }
+}
+
+#skills .grid .pane img {
   width: 160px;
 }
 
-#about .grid .pane p {
+#skills .grid .pane p {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  #about .grid .pane p {
-    text-align: justify;
+  #skills .grid .pane p {
+    text-align: left;
   }
 }
 
-#about .social-links {
+#skills .social-links {
   list-style: none;
   padding: 0;
 }
 
-#about .social-links li {
+#skills .social-links li {
   display: inline-block;
   padding: 8px;
 }
 
-#about .social-links li a i {
+#skills .social-links li a i {
   font-size: 24px;
 }
 
-#about .social-links li a:hover {
+#skills .social-links li a:hover {
   color: #fff200;
 }
 
-.programming {
-  height: 100vh;
-  background: url("../img/programming.jpg") no-repeat center center fixed;
-
+.service {
+  min-height: 100vh;
+  padding: 64px 16px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   display: flex;
   align-items: center;
+}
+
+.service h4 {
+  margin: 12px 0 16px 0;
+}
+
+.service .information {
+  max-width: 600px;
+  text-align: center;
+  padding: 12px 48px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .service .information {
+    text-align: left;
+    padding: 24px;
+  }
+}
+
+.programming {
+  background: url("../img/programming.jpg") no-repeat center center fixed;
   justify-content: flex-start;
 }
 
 .yoga {
-  height: 100vh;
   background: url("../img/peace.jpg") no-repeat center center fixed;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
 }
 
