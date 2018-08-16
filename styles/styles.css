@@ -13,7 +13,8 @@ body {
 
 html,
 body {
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 300;
 }
 
 body.noScroll {
@@ -24,17 +25,24 @@ h1,
 h2,
 h3,
 h4,
+h5,
+a,
+p,
+button {
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
 h5 {
+  font-size: 150%;
   font-weight: 500;
 }
 
 h4 {
   font-size: 140%;
-}
-
-button,
-p {
-  font-weight: 100;
 }
 
 .wip {
@@ -174,7 +182,11 @@ p {
   width: 100%;
 }
 
-.header h1,
+.header .title img {
+  width: 64px;
+  padding: 8px;
+}
+
 .header h2,
 .header ul li a {
   padding: 0;
@@ -219,7 +231,7 @@ p {
 
 .header ul li {
   display: inline;
-  padding-right: 16px;
+  padding-right: 24px;
 }
 
 .header ul li a {
@@ -231,7 +243,12 @@ p {
 }
 
 .header a.button {
-  padding: 4px 8px !important;
+  padding: 8px 16px;
+}
+
+.header a.button:hover {
+  background: #5ecc62;
+  color: white;
 }
 
 .intro {
@@ -252,23 +269,25 @@ p {
   padding: 16px;
 }
 
-.intro p {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 36px;
-  font-size: 24px;
+.intro .description {
+  margin-top: 160px;
 }
 
 .intro h3 {
-  font-size: 200%;
   padding: 0;
-  margin: 0 0 24px 0;
+  margin: 8px 8px 64px 8px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 120px;
+  font-weight: 100;
+  letter-spacing: 16px;
 }
 
-.intro p {
-  padding: 0;
-  margin: 8px 8px 12px 8px;
+.intro .button-container button,
+.intro .button-container a {
+  font-size: 80% !important;
+  letter-spacing: 1px;
+  font-weight: 100 !important;
 }
 
 button {
@@ -310,10 +329,11 @@ button {
 }
 
 .button {
-  padding: 6px 12px;
+  padding: 8px 16px;
   margin: 8px;
   border-width: 1px !important;
   border: 1px solid white;
+  border-radius: 24px;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -345,36 +365,30 @@ button {
 }
 
 .programming h4,
-.yoga h4,
-.programming p,
-.yoga p {
+.programming {
   color: white;
 }
 
-#about,
-#skills {
-  min-height: 60vh;
+#about {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 64px;
+  padding: 12px 48px;
 }
 
 #about {
-  background-color: #5ecc62;
+  background-color: #353a47;
 }
 
-#about h4,
-#skills h4 {
+#about h4 {
   color: white;
   padding: 0;
   margin: 0 0 16px 0;
   font-size: 140%;
 }
 
-#about h5,
-#skills h5 {
+#about h5 {
   font-size: 120%;
   margin: 16px auto 8px auto;
   padding: 0;
@@ -382,23 +396,20 @@ button {
 }
 
 #about h4,
-#skills h4,
-#about h5,
-#skills h5 {
+#about h5 {
   text-align: center;
 }
 
 @media (min-width: 768px) {
   #about h4,
-  #skills h4,
-  #about h5,
-  #skills h5 {
+  #about h5 {
     text-align: left;
   }
 }
 
 #about img {
-  width: 240px;
+  width: 420px;
+  max-width: 80vw;
   margin: 24px auto;
 }
 
@@ -408,19 +419,24 @@ button {
   }
 }
 
-#about a,
+#about a {
+  color: #5ecc62;
+  padding: 2px;
+  font-weight: bold;
+}
+
 #skills a {
   color: #5ecc62;
 }
 
 #about a:visited,
 #skills a:visited {
-  color: #77567a;
+  color: white;
 }
 
 #about .description {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
@@ -442,83 +458,42 @@ button {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #about .description {
     flex-direction: row;
   }
 }
 
-#about .description .paragraphs,
-#skills .description .paragraphs {
+#about .description .paragraphs {
+  letter-spacing: 2px;
   color: white;
-  line-height: 26px;
+  line-height: 48px;
+  font-size: 32px;
+  font-weight: 100;
+  padding: 24px;
 }
 
 @media (min-width: 768px) {
-  #about .description .paragraphs,
-  #skills .description .paragraphs {
+  #about .description .paragraphs {
     margin-left: 24px;
   }
 }
 
-#skills .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 24px;
-  flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  #skills .grid {
-    flex-direction: row;
-  }
-}
-
-#skills .grid .pane {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  line-height: 24px;
-}
-
-@media (min-width: 768px) {
-  #skills .grid .pane {
-    margin: 16px;
-  }
-}
-
-#skills .grid .pane img {
-  width: 160px;
-}
-
-#skills .grid .pane p {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  #skills .grid .pane p {
-    text-align: left;
-  }
-}
-
-#skills .social-links {
+.social-links {
   list-style: none;
   padding: 0;
 }
 
-#skills .social-links li {
+.social-links li {
   display: inline-block;
   padding: 8px;
 }
 
-#skills .social-links li a i {
+.social-links li a i {
   font-size: 24px;
 }
 
-#skills .social-links li a:hover {
+.social-links li a:hover {
   color: #fff200;
 }
 
@@ -557,8 +532,12 @@ button {
 }
 
 .yoga {
-  background: url("../img/peace.jpg") no-repeat center center fixed;
-  justify-content: flex-end;
+  justify-content: center;
+  background: white;
+}
+
+.yoga .information {
+  background: none;
 }
 
 footer {
