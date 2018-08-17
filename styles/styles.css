@@ -45,14 +45,24 @@ h4 {
   font-size: 140%;
 }
 
-.wip {
-  background: red;
-  color: white;
+.poloroid {
+  background: white;
+  padding: 24px;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+
+#about .poloroid p.caption {
+  font-family: "Permanent Marker", Courier, monospace;
+  color: black !important;
+  font-size: 24px;
+  padding: 0;
+  margin: 8px 0 0 0;
   text-align: center;
-  padding: 4px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+}
+
+#about .poloroid p.caption a {
+  color: #5ecc62;
+  text-decoration: none;
 }
 
 .separator {
@@ -101,24 +111,25 @@ h4 {
   margin: 0 auto;
 }
 
-#consultingPopup form fieldset {
+#consultingPopup form input,
+#consultingPopup form select {
   margin-bottom: 12px;
 }
 
-#consultingPopup form fieldset,
-#consultingPopup form fieldset input,
-#consultingPopup form fieldset textarea,
-#consultingPopup form fieldset select {
+#consultingPopup form,
+#consultingPopup form input,
+#consultingPopup form textarea,
+#consultingPopup form select {
   width: 96%;
 }
 
-#consultingPopup form fieldset {
+#consultingPopup form {
   border: none;
   padding: 0;
   margin: 6px;
 }
 
-#consultingPopup form fieldset label {
+#consultingPopup form label {
   display: block;
   margin-bottom: 4px;
   color: white;
@@ -126,17 +137,17 @@ h4 {
   font-weight: 100;
 }
 
-#consultingPopup form fieldset input,
-#consultingPopup form fieldset textarea,
-#consultingPopup form fieldset select,
-#consultingPopup form fieldset select option {
+#consultingPopup form input,
+#consultingPopup form textarea,
+#consultingPopup form select,
+#consultingPopup form select option {
   padding: 6px 12px;
   font-size: 16px;
   border: none;
   font-weight: 100;
 }
 
-#consultingPopup form fieldset textarea {
+#consultingPopup form textarea {
   height: 240px;
 }
 
@@ -270,17 +281,25 @@ h4 {
 }
 
 .intro .description {
-  margin-top: 160px;
+  margin-top: 240px;
 }
 
 .intro h3 {
-  padding: 0;
-  margin: 8px 8px 64px 8px;
-  text-align: center;
-  line-height: 36px;
-  font-size: 120px;
   font-weight: 100;
-  letter-spacing: 16px;
+  padding: 0;
+  margin: 8px 8px 32px 8px;
+  letter-spacing: 8px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 56px;
+}
+
+@media (min-width: 768px) {
+  .intro h3 {
+    line-height: 36px;
+    font-size: 120px;
+    margin-bottom: 48px;
+  }
 }
 
 .intro .button-container button,
@@ -357,16 +376,8 @@ button {
   color: #2f323a;
 }
 
-.programming,
-.yoga,
-#about,
-#skills {
+#about {
   padding: 0px 64px;
-}
-
-.programming h4,
-.programming {
-  color: white;
 }
 
 #about {
@@ -375,42 +386,12 @@ button {
   justify-content: center;
   flex-direction: column;
   padding: 12px 48px;
-}
-
-#about {
   background-color: #353a47;
 }
 
-#about h4 {
-  color: white;
-  padding: 0;
-  margin: 0 0 16px 0;
-  font-size: 140%;
-}
-
-#about h5 {
-  font-size: 120%;
-  margin: 16px auto 8px auto;
-  padding: 0;
-  text-align: center;
-}
-
-#about h4,
-#about h5 {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  #about h4,
-  #about h5 {
-    text-align: left;
-  }
-}
-
 #about img {
-  width: 420px;
+  width: 320px;
   max-width: 80vw;
-  margin: 24px auto;
 }
 
 @media (min-width: 768px) {
@@ -425,12 +406,7 @@ button {
   font-weight: bold;
 }
 
-#skills a {
-  color: #5ecc62;
-}
-
-#about a:visited,
-#skills a:visited {
+#about a:visited {
   color: white;
 }
 
@@ -440,17 +416,12 @@ button {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-}
-
-#about .description .separator,
-.service .separator {
-  margin: 0 auto;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
-  #about .description .separator,
-  .service .separator {
-    margin: 0;
+  #about {
+    padding: 64px;
   }
 
   #about .description {
@@ -464,18 +435,19 @@ button {
   }
 }
 
-#about .description .paragraphs {
-  letter-spacing: 2px;
+#about .description p {
+  letter-spacing: 1px;
   color: white;
-  line-height: 48px;
-  font-size: 32px;
+  line-height: 32px;
+  font-size: 20px;
   font-weight: 100;
-  padding: 24px;
 }
 
 @media (min-width: 768px) {
-  #about .description .paragraphs {
+  #about .description p {
     margin-left: 24px;
+    font-size: 32px;
+    line-height: 48px;
   }
 }
 
@@ -497,49 +469,6 @@ button {
   color: #fff200;
 }
 
-.service {
-  min-height: 100vh;
-  padding: 64px 16px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-}
-
-.service h4 {
-  margin: 12px 0 16px 0;
-}
-
-.service .information {
-  max-width: 600px;
-  text-align: center;
-  padding: 12px 48px;
-  background: rgba(0, 0, 0, 0.25);
-}
-
-@media (min-width: 768px) {
-  .service .information {
-    text-align: left;
-    padding: 24px;
-  }
-}
-
-.programming {
-  background: url("../img/programming.jpg") no-repeat center center fixed;
-  justify-content: flex-start;
-}
-
-.yoga {
-  justify-content: center;
-  background: white;
-}
-
-.yoga .information {
-  background: none;
-}
-
 footer {
   padding: 24px;
   display: flex;
@@ -547,4 +476,5 @@ footer {
   justify-content: center;
   flex-direction: column;
   color: white;
+  background: #5ecc62;
 }
