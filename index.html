@@ -33,28 +33,33 @@
         <button class="closeButton" id="closeConsulting">
             <i class="fas fa-times"></i>
         </button>
-        <form>
-            <fieldset>
-                <label>Name:</label>
-                <input id="" type="text" />
-            </fieldset>
-            <fieldset>
-                <label>Email:</label>
-                <input id="" type="email" />
-            </fieldset>
-            <fieldset id="consultingSubject">
-                <label>Subject</label>
-                <select id="consultTopic">
-                    <option value="Spirituality">Spirituality</option>
-                    <option value="Development">Development</option>
+        <form id="consulting-form" action="{{}}" method="POST">
+            <label>
+                Name: 
+                <input name="contact" id="" type="text" required />
+            </label>
+
+            <label>
+                Email: 
+                <input name="from" id="" type="email" required />
+            </label>
+
+            <label>
+                Subject: 
+                <select name="subject" id="consultTopic" required>
+                    <option value="Evolution and Growth">Evolution and Growth</option>
+                    <option value="Programming Development">Programming Development</option>
                 </select>
-            </fieldset>
-            <fieldset>
-                <label>Details:</label>
-                <textarea id=""></textarea>
-            </fieldset>
+            </label>
+
+            <label>
+                Details: 
+                <textarea name="body" id="" required></textarea>
+            </label>
+
             <button class="button">Submit</button>
         </form>
+        <p id="js-form-response"></p>
     </div>
 
     <nav class="header" id="customHeader">

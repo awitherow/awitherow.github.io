@@ -6,7 +6,6 @@
 // 1. mobile menu handler
 // 2. scroll enablers and disablers
 // 3. consultingPopup opener
-// 4. consultingPopup TopicSwitcher functions
 
 //
 //
@@ -37,9 +36,8 @@
   ccB.addEventListener("click", closeConsulting);
   console.log("closeConsultingButton on standby.");
 
-  // dropdown for picking a consulting topic to select subtopic
-  var cT = document.getElementById("consultTopic");
-  cT.addEventListener("select", handleTopicSwitcher);
+  const form = document.getElementById("consulting-form");
+  form.addEventListener("submit", handleForm)
 })();
 
 //
@@ -82,8 +80,6 @@ function openConsulting() {
   disableScroll();
   var consultingPopup = document.getElementById("consultingPopup");
   consultingPopup.classList.add("bounceIn", "shown");
-  // TODO: this attribute of data smart choose the correct subtopics
-  handleTopicSwitcher(key);
 }
 
 function closeConsulting() {
@@ -96,38 +92,35 @@ function closeConsulting() {
   }, 500);
 }
 
-//
-//
-//
-// 4. consultingPopup TopicSwitcher functions
-function handleTopicSwitcher(selected) {
-  console.log(this);
-  var key = selected ? selected : this.attribute; // store this.selected as variable
-  var subTopics = document.getElementById("subTopics");
-  if (subTopics) {
-    // get nested select from subTopics
-    // add fadeUpOut to nested select, delete it after 500 seconds.
-    addSubTopicOptions(key);
-    return;
-  }
+// email form for consulting handling
+function handleForm(e) {
+  e.preventDefault();
 
-  var consultingSubject = document.getElementById("consultingSubject");
-  consultingSubject.insertAdjacentHTML(
-    "<fieldset id='subTopics'>" +
-      "<label>Specific Inqiury</label>" +
-      "<select id='subTopicsDropdown'></select>" +
-      "</fieldset>"
-  );
-  addSubTopicOptions(key);
+  const form = this;
+
+  // Prepare data to send
+  let data = {};
+  const formElements = Array.from(form);
+
+  formElements.map(function(input) {
+    data[input.name] = input.value
+  });
+  
+  data = removeEmpties(data);
+
+  const formResponse = document.querySelector("js-form-response");
+
+  // Log what our lambda function will receive
+  console.log(JSON.stringify(data));
 }
 
-function addSubTopicOptions(key) {
-  var subTopicsAvailable = {
-    Development: [],
-    Spirituality: []
-  };
-
-  var subTopicsToUse = subTopicsAvailable[key];
-  var subTopicsHTML = document.getElementById("subTopics");
-  subTopicsHTML.appendChild("");
-}
+// remove empty key/value pairs from objects
+function removeEmpties(obj) {
+  var newObj = {};
+  Object.keys(obj).forEach(function(prop) {
+    if (obj[prop]) {
+      newObj[prop] = obj[prop];
+    }
+  });
+  return newObj;
+};
