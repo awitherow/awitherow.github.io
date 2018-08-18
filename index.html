@@ -8,8 +8,7 @@
     <title>AW</title>
     <meta name="description" content="my personal site">
     <meta name="author" content="@awitherow">
-
-    <link async href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:300,400,100" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
     <link rel="manifest" href="manifest.json">
     <link href="./styles/styles.css" rel="stylesheet">
@@ -20,23 +19,58 @@
 
 <body>
 
-    <div class="wip">WORK IN PROGRESS, NOT EVERYTHING WORKING YET ;)</div>
-
     <div id="mobileMenu">
-        <button id="closeButton">
+        <button class="closeButton" id="closeMenu">
             <i class="fas fa-times"></i>
         </button>
         <a href="#">Home</a>
         <a href="https://awitherow.github.io/blog/" target="_blank">Blog</a>
         <a href="#about">About</a>
-        <a href="#programming">Programming</a>
-        <a href="#yoga">Yoga</a>
-        <a class="button" href="#consult">Free Consulting</a>
+        <button data-type="" class="button consultingButton" href="#consult">Free Consulting</button>
+    </div>
+
+    <div id="consultingPopup">
+        <button class="closeButton" id="closeConsulting">
+            <i class="fas fa-times"></i>
+        </button>
+        <form id="consulting-form" action="https://3sy8fq80zl.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer" method="POST">
+
+            <div style="display:none;">
+                <label>Keep this field blank</label>
+                <input type="text" name="honeypot" id="honeypot" />
+            </div>
+
+            <label>
+                Name:
+                <input name="contact" id="" type="text" required />
+            </label>
+
+            <label>
+                Email:
+                <input name="from" id="" type="email" required />
+            </label>
+
+            <label>
+                Subject:
+                <select name="subject" id="consultTopic" required>
+                    <option value="Evolution and Growth">Evolution and Growth</option>
+                    <option value="Programming Development">Programming Development</option>
+                </select>
+            </label>
+
+            <label>
+                Details:
+                <textarea name="body" id="" required></textarea>
+            </label>
+
+            <button class="button">Submit</button>
+        </form>
+        <p id="js-form-response"></p>
     </div>
 
     <nav class="header" id="customHeader">
         <div class="title">
-            <h1>AW</h1>
+            <img src="./img/logo.png" alt="an A overlayed with a W so that it looks like a perspective shift highway with a walkway across.p">
         </div>
 
         <ul>
@@ -47,13 +81,7 @@
                 <a href="#about">About</a>
             </li>
             <li>
-                <a href="#programming">Programming</a>
-            </li>
-            <li>
-                <a href="#yoga">Yoga</a>
-            </li>
-            <li>
-                <a class="button" href="#consult">Contact</a>
+                <a data-type="" class="button consultingButton" href="#consult">Contact</a>
             </li>
             <li>
                 <a href="https://awitherow.github.io/blog/" target="_blank">Blog</a>
@@ -67,68 +95,31 @@
 
     <div class="intro">
         <div class="description">
-            <p>
-                <strong>Fulfill Your Dreams</strong>, be it through
-                <strong>Quality Technical Solutions</strong> or personal evolution through
-                <strong>Yoga, Mindfulness and Spirituality</strong>.</p>
+            <h3>EVOLVE</h3>
         </div>
         <div class="button-container">
-            <button class="button primary">Free Consulting</button>
-            <a href="#about" data-scroll class="button">Get To Know Me</a>
+            <button data-type="" class="button primary consultingButton">Free Consulting</button>
+            <a href="#about" data-scroll class="button">Elevator Pitch</a>
         </div>
     </div>
 
     <div id="about">
         <div class="description">
-            <img src="./img/photo.jpg" />
-            <div class="paragraphs">
-                <h4>Get To Know Me</h4>
-                <div class="separator dark"></div>
-                <p>My name is Austin Witherow. I was born and raised in Mechanicsville, Virginia where most of my life was spent
-                    at the local swimming pool during the summer, or competitively swimming year around. When I was not in
-                    the pool, I was always reading books, making art or tinkering around with the computer. The competitive
-                    swimming career lead me to a scholarship Division One career at George Mason University where I was the
-                    captain of the team for 3 of my 4 years, and a recipient of over 14 medals through hard work and commitment
-                    to success.
-                </p>
-                <p>Since then ...</p>
+            <div class="poloroid">
+                <img src="./img/photo.jpg" />
+                <p class="caption">Old Rag. Madison, Virginia w/ <a target="_blank" href="https://www.instagram.com/keyannaa/">@keyannaa</a>.
+                    August 2018</p>
             </div>
+            <p>
+                Hi, I'm Austin Witherow. I'm a yogi living on <strong>Oahu, Hawaii</strong>. My purpose is to assist your<strong>
+                    evolution</strong> using <strong>ancient</strong>, <strong>modern holistic technologies</strong> that
+                <strong>cultivate Mind, Body and Spirit</strong> in <strong>harmony</strong>. Ready? <button class="consultingButton button primary inline">Hit
+                    me up!</button> If not and you want a
+                <strong>slick website or app developed</strong>, you can hit me up too. More info on that stuff in my <a
+                    href="./files/cv.pdf" target="_blank">cv/resume</a>
+                !
+            </p>
         </div>
-    </div>
-
-    <div id="skills">
-        <h4>Professional Skillset</h4>
-        <div class="separator"></div>
-        <div class="grid">
-            <div class="pane">
-                <img src="./img/robot.png" />
-                <h5>Web and Application Development</h5>
-                <p>
-                    Since graduating with my degree in Applied Information Technology with Business and Web Development concentrations, I have
-                    worked as a graphic designer and web developer in America and Germany with over 5 years of experience.
-                    I am now working with individuals and small businesses to bring quality into the world at minimal costs.
-                    You can view my latest copy of my
-                    <a href="./files/cv.pdf" target="_blank">curriculum vitae</a> for a detailed overview of my experience, or the social links below for code samples
-                    and my business connections.
-                </p>
-            </div>
-            <div class="pane">
-                <img src="./img/lotus.png" />
-                <h5>Yoga, Mindfulness, and Mediation</h5>
-                <p>
-                    At the age of 18 upon getting accepted into George Mason on my swimming scholarship, I began looking up competitive edges
-                    so that I could make the best of that upcoming career. Everywhere I read, meditation was key. I discovered
-                    a wonderful site,
-                    <a href="https://www.aypsite.com/MainDirectory.html" target="_blank">Advanced Yoga Practices</a> and began immediately integrating their twice daily practices. As these practices
-                    began to scrub away deep karmic conditioning and truly transform my life, my bhakti steadily lead me
-                    to seek Truth in everything. My passion is effective practice for gradual and beautiful spiritual unfoldment
-                    and through my learning and understanding of Yoga, it is my main desire in life to share this with the
-                    world so that everyone can reach deeper levels of fulfillment, transcend suffering and find immortal
-                    happiness.
-                </p>
-            </div>
-        </div>
-        <div class="separator"></div>
         <ul class="social-links">
             <li>
                 <a target="_blank" href="https://www.linkedin.com/in/austinwitherow/">
@@ -146,50 +137,6 @@
                 </a>
             </li>
         </ul>
-    </div>
-
-    <div id="programming" class="service programming">
-        <div class="information">
-            <h4>Quality Programming Solutions</h4>
-            <div class="separator"></div>
-            <p class="description">After 6 years of industry experience including
-                <strong>Government, Video Gaming, Cruiseline and Cryptocurrency</strong> sectors, I decided to start working for
-                myself by working for others who dream to do good in the world.</p>
-            <p class="description">With technical expertise in
-                <strong>React, React-Native, Nodejs, Javascript, HTML and CSS</strong>, I can help you build your
-                <strong>digital brand, website, blog, storefront, native application, robot servant and more</strong>. My capabilities
-                are not limited to these ideas, so if you can DREAM it, I will help you REALIZE it. If there is a will, there
-                is a way, and we can make it.
-            </p>
-            <p class="description">Reach out today for
-                <strong>free consulting</strong>, and we will get the job done in a
-                <strong>lean, beautiful and cost efficient</strong> manner!</p>
-            <div class="button-container">
-                <a href="#" class="button primary" target="_blank">Free Consulting</a>
-                <a href="#" class="button" target="_blank">Satisfied Clients</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="yoga" class="service yoga">
-        <div class="information">
-            <h4>Yoga, Mindfulness and Spirituality</h4>
-            <div class="separator"></div>
-            <p class="description">What is Yoga? How can I be more Mindful? How do I get started with Meditation? How can I improve my spiritual
-                practice? How can I find happiness? How can I overcome suffering? Is there more to this? Who am I?</p>
-            <p class="description">Perhaps at some point in your life you have asked these questions, I know I have. That is why I have dedicated
-                over 8 years of my life to intensive study and
-                <strong>practice</strong> of Traditional Yoga, Mindfulness and Meditation. What a journey it has been.</p>
-            <p class="description">Having built a solid practice and understanding of these above topics, it is my main dream and desire to give
-                back to the world and help all beings realise their potential through systems of practice using Yoga, Mindfulness
-                and Meditation at their core.</p>
-            <p class="description">If you're interested in finding answers to the questions above and are ready to progress with your personal evolution,
-                reach out today and don't let fear hold you back.</p>
-            <div class="button-container">
-                <a class="button primary">Reach Out Today</a>
-                <a class="button">Qualifications</a>
-            </div>
-        </div>
     </div>
 
     <footer>
