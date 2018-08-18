@@ -134,6 +134,9 @@ function handleForm(e) {
 
       formResponse.innerHTML =
         "Thanks for the message. I’ll be in touch shortly.";
+
+      closeConsulting();
+      formResponse.style = "display: none";
     } else {
       // The form submission failed
       formResponse.innerHTML = "Something went wrong";
