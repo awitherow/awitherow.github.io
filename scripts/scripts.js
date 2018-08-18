@@ -37,7 +37,7 @@
   console.log("closeConsultingButton on standby.");
 
   const form = document.getElementById("consulting-form");
-  form.addEventListener("submit", handleForm)
+  form.addEventListener("submit", handleForm);
 })();
 
 //
@@ -103,15 +103,39 @@ function handleForm(e) {
   const formElements = Array.from(form);
 
   formElements.map(function(input) {
-    data[input.name] = input.value
+    data[input.name] = input.value;
   });
-  
-  data = removeEmpties(data);
 
-  const formResponse = document.querySelector("js-form-response");
+  data = removeEmpties(data);
 
   // Log what our lambda function will receive
   console.log(JSON.stringify(data));
+
+  // Construct an HTTP request
+  var xhr = new XMLHttpRequest();
+  xhr.open(form.method, form.action, true);
+  xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+  xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+  // Send the collected data as JSON
+  xhr.send(JSON.stringify(data));
+
+  const formResponse = document.getElementById("js-form-response");
+
+  // Callback function
+  xhr.onloadend = function(response) {
+    if (response.target.status === 200) {
+      // The form submission was successful
+      form.reset();
+
+      formResponse.innerHTML =
+        "Thanks for the message. I’ll be in touch shortly.";
+    } else {
+      // The form submission failed
+      formResponse.innerHTML = "Something went wrong";
+      console.error(JSON.parse(response.target.response).message);
+    }
+  };
 }
 
 // remove empty key/value pairs from objects
@@ -123,4 +147,4 @@ function removeEmpties(obj) {
     }
   });
   return newObj;
-};
+}
