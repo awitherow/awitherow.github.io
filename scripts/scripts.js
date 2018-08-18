@@ -108,6 +108,10 @@ function handleForm(e) {
 
   data = removeEmpties(data);
 
+  if (document.getElementById("honeypot").value) {
+    window.location = "https://www.youtube.com/watch?v=QH2-TGUlwu4";
+  }
+
   // Log what our lambda function will receive
   console.log(JSON.stringify(data));
 
