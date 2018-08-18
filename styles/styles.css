@@ -54,7 +54,8 @@ h4 {
 #about .poloroid p.caption {
   font-family: "Permanent Marker", Courier, monospace;
   color: black !important;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 16px;
   padding: 0;
   margin: 8px 0 0 0;
   text-align: center;
@@ -194,7 +195,7 @@ h4 {
 }
 
 .header .title img {
-  width: 64px;
+  width: 50px;
   padding: 8px;
 }
 
@@ -359,6 +360,16 @@ button {
   font-weight: 100 !important;
 }
 
+.button.inline {
+  font-size: 20px !important;
+}
+
+@media (min-width: 768px) {
+  .button.inline {
+    font-size: 28px !important;
+  }
+}
+
 .button:hover {
   cursor: pointer;
   color: #5ecc62;
@@ -377,7 +388,7 @@ button {
 }
 
 #about {
-  padding: 0px 64px;
+  padding: 64px;
 }
 
 #about {
@@ -385,7 +396,6 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 12px 48px;
   background-color: #353a47;
 }
 
