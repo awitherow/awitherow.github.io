@@ -259,11 +259,6 @@ h4 {
   padding: 8px 16px;
 }
 
-.header a.button:hover {
-  background: #5ecc62;
-  color: white;
-}
-
 .intro {
   height: 100vh;
   background: url("../img/bg-dark.jpg") no-repeat center center fixed;
@@ -475,7 +470,11 @@ button {
   font-size: 24px;
 }
 
-.social-links li a:hover {
+.social-links li a:visited i {
+  color: #5ecc62;
+}
+
+.social-links li a i:hover {
   color: #fff200;
 }
 
