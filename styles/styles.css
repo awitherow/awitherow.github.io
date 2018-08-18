@@ -48,6 +48,7 @@ h4 {
 .poloroid {
   background: white;
   padding: 24px;
+  max-width: 368px;
   box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -110,6 +111,7 @@ h4 {
   width: 80%;
   max-width: 768px;
   margin: 0 auto;
+  padding: 24px;
 }
 
 #consultingPopup form input,
@@ -117,11 +119,10 @@ h4 {
   margin-bottom: 12px;
 }
 
-#consultingPopup form,
 #consultingPopup form input,
 #consultingPopup form textarea,
 #consultingPopup form select {
-  width: 96%;
+  width: 100%;
 }
 
 #consultingPopup form {
@@ -429,22 +430,6 @@ button {
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  #about {
-    padding: 64px;
-  }
-
-  #about .description {
-    text-align: left;
-  }
-}
-
-@media (min-width: 1024px) {
-  #about .description {
-    flex-direction: row;
-  }
-}
-
 #about .description p {
   letter-spacing: 1px;
   color: white;
@@ -454,14 +439,29 @@ button {
 }
 
 @media (min-width: 768px) {
+  #about {
+    padding: 64px;
+  }
+
+  #about .description {
+    text-align: left;
+    flex-direction: row;
+  }
+
   #about .description p {
     margin-left: 24px;
+  }
+}
+
+@media (min-width: 970px) {
+  #about .description p {
     font-size: 32px;
     line-height: 48px;
   }
 }
 
 .social-links {
+  margin-top: 64px;
   list-style: none;
   padding: 0;
 }
