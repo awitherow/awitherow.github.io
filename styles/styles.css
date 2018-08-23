@@ -52,6 +52,13 @@ h4 {
   font-size: 140%;
 }
 
+.divider {
+  height: 1px;
+  background-color: #5ecc62;
+  width: 160px;
+  margin: 16px 0;
+}
+
 .poloroid {
   background: white;
   padding: 24px;
