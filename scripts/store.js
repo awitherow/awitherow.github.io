@@ -8,7 +8,7 @@ const categories = [
           "Advanced Yoga Practices - Easy Lessons for Ecstatic Living Vol I",
         link: "http://amzn.to/2CaIbtJ",
         description:
-          "This book formed the foundation of my Sadhāna for the last 7 years and I still incorporate techniques described. To me, it will ever be an invaluable resource for a really good overview of Yoga without the fluff.",
+          "Advanced Yoga Practices (AYP) brings together the most effective methods of Yoga in a flexible integrated system that anyone can use. Instructions are given in plain English for deep meditation, spinal breathing pranayama, bodily manipulations (asanas, mudras and bandhas), tantric sexual practices, and other methods that are systematically applied to swing open the door of our nervous system to permanent higher experience. This is a non-sectarian approach that is compatible with any belief system or religious background.",
         affiliate: true
       },
       {
@@ -17,6 +17,13 @@ const categories = [
         link: "https://amzn.to/2ub6xhq",
         description:
           "This book is the second in the series of Advanced Yoga Practices.",
+        affiliate: true
+      },
+      {
+        title: "Kundalini Tantra",
+        link: "https://amzn.to/2waDGKW",
+        description:
+          "Kundalini Yoga is a part of the tantric tradition. Even though you may have already been introduced to yoga, it is necessary to know something about tantra also. Since ancient times, the wise have realised that mind can be expanded and that experiences do not necessarily depend on the object. This means that if somebody is playing music, I can hear it, and if somebody has painted a picture, I can see it, but I can also see if there is no picture, and I can also hear if there is no music. This is also a quality of man's personality which has been ignored in the last 150 to 200 years. This Book presents a systematic and pragmatic approach to the awakening of kundalini, which arouses greater intelligence from it's sleep and you can give birth to a new range of creativity.",
         affiliate: true
       }
     ]
@@ -30,14 +37,21 @@ const categories = [
         title: "The Enchiridion",
         link: "http://amzn.to/2vyGzmW",
         description:
-          "This book was my first introduction to the philosophy of taming the mind in order to actively shape perception of reality basic on the Stoic Philosophy.",
+          "Although he was born into slavery and endured a permanent physical disability, Epictetus (ca. 50–ca. 130 AD) maintained that all people are free to control their lives and to live in harmony with nature. We will always be happy, he argued, if we learn to desire that things should be exactly as they are.",
         affiliate: true
       },
       {
         title: "The Ra Contact: Teaching the Law of One",
         link: "https://amzn.to/2KOkHzc",
         description:
-          "Ra is the entity whose teachings were perverted by the Egyptians. In the Teachings of the Law Of One, Ra attempts to rectify these perversions and teach the Truth of the Universe according to their understanding.",
+          "For thousands of years those of Ra have sought to teach the Law of One to seekers of truth on Earth who wished to learn of the unity or oneness of all things. This basic law of all creation is buried deep within each of our hearts because we really are one in love and in light, the building blocks of the universe. We are all manifestations of the One Infinite Creator. We are the Creator. We are not learning this law for the first time but are remembering it yet again as all mystics have taught throughout Earth’s history. Our journey of self-realization is the discovery or remembrance of this essential truth, our essential identity. A waking up, as some have called it, within an illusion of separation.",
+        affiliate: true
+      },
+      {
+        title: "Angel Tech: A Modern Shamans Guide to Reality Selection",
+        link: "https://amzn.to/2PALVIj",
+        description:
+          "Angel Tech is a guide for the realization of the Multidimensional Self. The great neurological scripts of the past are synthesized and modernized for our day: Tarot, Cabala, Alchemy, the Hindu Chakra System and more are all made accessible and understandable.",
         affiliate: true
       }
     ]
@@ -50,7 +64,8 @@ const categories = [
       {
         title: "Behold A Pale Horse",
         link: "http://amzn.to/2ERKjaG",
-        description: "",
+        description:
+          "Bill Cooper, former United States Naval Intelligence Briefing Team member, reveals information that remains hidden from the public eye. This information has been kept in topsecret government files since the 1940s. His audiences hear the truth unfold as he writes about the assassination of John F. Kennedy, the war on drugs, the secret government, UFOs and a fake alien invasion orchestrated by the secret government. ",
         affiliate: true
       },
       {
@@ -79,6 +94,8 @@ const categories = [
 function populateCategories() {
   const TableOfContents = document.getElementById("toc");
   const ListOfItems = document.getElementById("the-list");
+
+  categories.pop(); // remove placeholder so that it can be kept in data set for testing/copypaste assistance
 
   categories.map(function(cat) {
     TableOfContents.innerHTML +=
