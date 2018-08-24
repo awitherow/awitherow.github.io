@@ -25,7 +25,10 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+  font-weight: 100;
+}
+
 a,
 p {
   font-weight: 300;
@@ -47,6 +50,13 @@ h5 {
 
 h4 {
   font-size: 140%;
+}
+
+.divider {
+  height: 1px;
+  background-color: #5ecc62;
+  width: 160px;
+  margin: 16px 0;
 }
 
 .poloroid {
@@ -287,7 +297,6 @@ h4 {
 }
 
 .intro h3 {
-  font-weight: 300;
   padding: 0;
   margin: 8px 8px 32px 8px;
   letter-spacing: 8px;
