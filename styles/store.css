@@ -1,10 +1,32 @@
+html,
+body {
+  background: white;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  margin: 0;
+  margin: 32px 0 0 0;
   padding: 0;
+}
+
+a {
+  color: #5ecc62;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li {
+  color: #2f323a;
+  font-weight: 400;
 }
 
 .header {
@@ -18,13 +40,18 @@ h5 {
   justify-content: flex-start;
   flex-direction: column;
   color: white;
-  margin-top: 100px;
-  padding: 16px;
+  max-width: 768px;
+  padding: 64px 16px;
+  margin: 0 auto;
 }
 
 .store h1,
 .store h2 {
   margin-bottom: 4px;
+}
+
+.store h2 {
+  margin-top: 0;
 }
 
 .store h2 {
@@ -34,4 +61,35 @@ h5 {
 .store sub {
   font-style: italic;
   font-size: 80%;
+}
+
+.store ul,
+.store ol {
+  padding: 0;
+  margin: 0;
+}
+
+.store ol {
+  padding-left: 32px;
+}
+
+.store ul li {
+  list-style: none;
+  margin: 16px 0 16px 24px;
+  padding-left: 16px;
+  border-left: 1px solid #5ecc62;
+}
+
+.store ul li p {
+  margin: 8px 0;
+}
+
+.store ul li .small {
+  padding: 0;
+  font-size: 80%;
+  font-style: italic;
+}
+
+.store h4:first-of-type {
+  margin-top: 12px;
 }

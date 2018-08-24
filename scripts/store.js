@@ -24,7 +24,7 @@ const categories = [
   {
     category: "Philosophy",
     description:
-      "Philosophy is the study of life. Mostly books, the following provide insights to past and present paradigms and technologies I have used to navigate these Realities that still have some impact on my views.",
+      "Philosophy is the 'Investigation of the nature, causes, or principles of reality, knowledge, or values, based on logical reasoning rather than empirical methods'. Mostly books, the following provide insights to past and present paradigms and technologies I have used to navigate these Realities that still have some impact on my views.",
     items: [
       {
         title: "The Enchiridion",
@@ -96,13 +96,15 @@ function populateCategories() {
     let listItems = "";
 
     cat.items.map(function(rec) {
-      let affilateFlag = rec.affiliate ? "<sub>Affiliate Link</sub>" : "";
+      let affilateFlag = rec.affiliate
+        ? "<p class='small'>Affiliate Link</p>"
+        : "";
       let li =
-        "<li><a target='_blank' href='" +
+        "<li><strong><a target='_blank' href='" +
         rec.link +
         "'>" +
         rec.title +
-        "</a><p>" +
+        "</a></strong><p>" +
         rec.description +
         "</p>" +
         affilateFlag +
