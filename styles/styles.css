@@ -116,36 +116,65 @@ h4 {
   overflow-y: scroll;
 }
 
-#consultingPopup.shown {
+#mailchimp {
+  position: absolute;
+  bottom: 0;
+  background-color: #5ecc62;
+  padding: 16px 0;
+  max-width: 320px;
+}
+
+#mailchimp form {
+  text-align: center;
+  padding: 0;
+}
+
+#mailchimp .button {
+  color: #2f323a;
+}
+
+#mailchimp .border:hover {
+  border-color: #2f323a;
+}
+
+#mailchimp form,
+#mailchimp input,
+#mailchimp label {
+  display: inline-block;
+  width: auto;
+  font-size: 90% !important;
+}
+
+#mailchimp #consultingPopup.shown {
   padding-top: 80px;
   justify-content: flex-start;
 }
 
-#consultingPopup form {
+form {
   width: 80%;
   max-width: 768px;
   margin: 0 auto;
   padding: 24px;
 }
 
-#consultingPopup form input,
-#consultingPopup form select {
+form input,
+form select {
   margin-bottom: 12px;
 }
 
-#consultingPopup form input,
-#consultingPopup form textarea,
-#consultingPopup form select {
+form input,
+form textarea,
+form select {
   width: 100%;
 }
 
-#consultingPopup form {
+form {
   border: none;
   padding: 0;
   margin: 6px;
 }
 
-#consultingPopup form label {
+form label {
   display: block;
   margin-bottom: 4px;
   color: white;
@@ -153,25 +182,25 @@ h4 {
   font-weight: 300;
 }
 
-#consultingPopup form input,
-#consultingPopup form textarea,
-#consultingPopup form select,
-#consultingPopup form select option {
+form input,
+form textarea,
+form select,
+form select option {
   padding: 6px 12px;
   font-size: 16px;
   border: none;
   font-weight: 300;
 }
 
-#consultingPopup form textarea {
+form textarea {
   height: 240px;
 }
 
-#consultingPopup form button {
+form button {
   font-size: 18px;
 }
 
-#consultingPopup form button:hover {
+form button:hover {
   color: #353a47;
   border-color: #353a47;
 }
