@@ -119,14 +119,20 @@ h4 {
 #mailchimp {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
   background-color: #5ecc62;
-  padding: 16px 0;
-  max-width: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #mailchimp form {
   text-align: center;
-  padding: 0;
+  padding: 8px 4px;
+  margin: 0 auto;
 }
 
 #mailchimp .button {
@@ -140,9 +146,25 @@ h4 {
 #mailchimp form,
 #mailchimp input,
 #mailchimp label {
-  display: inline-block;
+  display: inline;
   width: auto;
   font-size: 90% !important;
+}
+
+#mailchimp input,
+#mailchimp label {
+  margin: 0;
+}
+
+#mailchimp label {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  #mailchimp label {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
 }
 
 #mailchimp #consultingPopup.shown {
