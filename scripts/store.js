@@ -163,23 +163,26 @@ function populateCategories() {
     let listItems = "";
 
     cat.items.map(function(rec) {
-      let affilateFlag = rec.affiliate
-        ? "<p class='small'>Affiliate Link</p>"
-        : "";
+      let refLink =
+        "<p class='button-container'><a class='button " +
+        rec.affiliate.type +
+        "' target='_blank' href='" +
+        rec.link +
+        "'>Purchase at <i class='fab fa-" +
+        rec.affiliate.type +
+        "'></i></a></p>";
 
       let li =
         "<li><img src='./img/store/" +
         rec.img.src +
         "' alt='" +
         rec.img.alt +
-        "' /><div><strong><a target='_blank' href='" +
-        rec.link +
-        "'>" +
+        "' /><div><strong>" +
         rec.title +
-        "</a></strong><p>" +
+        "</strong><p>" +
         rec.description +
         "</p>" +
-        affilateFlag +
+        refLink +
         "</div></li>";
       listItems += li;
     });
