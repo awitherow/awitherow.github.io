@@ -118,10 +118,11 @@ h4 {
 
 #mailchimp {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
+  bottom: 16px;
+  right: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
   background-color: #5ecc62;
 
   display: flex;
@@ -129,35 +130,17 @@ h4 {
   justify-content: center;
 }
 
-#mailchimp form {
-  text-align: center;
-  padding: 8px 4px;
-  margin: 0 auto;
+#mailchimp a i {
+  color: white;
+  font-size: 24px;
 }
 
-#mailchimp .button {
-  color: #2f323a;
+#mailchimp a:visited i {
+  color: white;
 }
 
-#mailchimp .border:hover {
-  border-color: #2f323a;
-}
-
-#mailchimp form,
-#mailchimp input,
-#mailchimp label {
-  display: inline;
-  width: auto;
-  font-size: 90% !important;
-}
-
-#mailchimp input,
-#mailchimp label {
-  margin: 0;
-}
-
-#mailchimp label {
-  margin-bottom: 8px;
+#mailchimp a:hover i {
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -257,7 +240,7 @@ form button:hover {
   padding: 24px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
 }
 
@@ -346,7 +329,7 @@ form button:hover {
 }
 
 .intro .description {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 .intro h3 {
@@ -356,6 +339,10 @@ form button:hover {
   text-align: center;
   line-height: 32px;
   font-size: 56px;
+}
+
+.intro .button-container {
+  flex-direction: row;
 }
 
 @media (min-width: 768px) {
