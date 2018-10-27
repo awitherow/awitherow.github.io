@@ -417,10 +417,6 @@ form button:hover {
   font-weight: 300 !important;
 }
 
-.button.inline {
-  font-size: 20px !important;
-}
-
 @media (min-width: 768px) {
   .button.inline {
     font-size: 28px !important;
@@ -450,7 +446,7 @@ p .button {
 }
 
 #about {
-  padding: 64px;
+  padding: 8px;
 }
 
 #about {
@@ -484,24 +480,33 @@ p .button {
 
 #about .description {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 #about .description p {
   letter-spacing: 1px;
   color: white;
-  line-height: 32px;
-  font-size: 20px;
   font-weight: 300;
+  line-height: 24px;
+  font-size: 17px !important;
+}
+
+#about .description .ps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
   #about {
-    padding: 64px;
+    padding: 64px 16px;
   }
 
   #about .description {
@@ -512,12 +517,9 @@ p .button {
   #about .description p {
     margin-left: 24px;
   }
-}
 
-@media (min-width: 970px) {
-  #about .description p {
-    font-size: 32px;
-    line-height: 48px;
+  #about .description p:first-of-type {
+    margin-top: 0;
   }
 }
 
