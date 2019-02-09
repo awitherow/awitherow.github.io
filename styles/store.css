@@ -1,10 +1,37 @@
 #store {
-	padding: 64px 16px;
-	margin: 0 auto;
-	max-width: 768px;
-	color: white;
+  padding: 64px 8px;
+  margin: 0 auto;
+  max-width: 900px;
+  color: white;
 }
 
 #store a {
-	color: #5ecc62;
+  color: #5ecc62;
+}
+
+#store h2,
+#store h3,
+h4 {
+  font-size: 100%;
+}
+
+#store h2 {
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 4px;
+}
+
+#store h3 {
+  font-style: italic;
+  margin-top: 0;
+  font-size: 90%;
+}
+
+#store h4 {
+  margin: 8px 0;
+}
+
+#store .store-category-container,
+#store .store-items {
+  margin-left: 8px;
 }
