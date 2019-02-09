@@ -11,23 +11,32 @@
 
 #store h2,
 #store h3,
-h4 {
+#store h4,
+#store h5 {
   font-size: 100%;
 }
 
-#store h2 {
-  font-weight: bold;
-  font-size: 120%;
+#store h1 {
   margin-bottom: 4px;
 }
 
+#store h2 {
+  margin-top: 0;
+}
+
 #store h3 {
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 8px;
+}
+
+#store h4 {
   font-style: italic;
   margin-top: 0;
   font-size: 90%;
 }
 
-#store h4 {
+#store h5 {
   margin: 8px 0;
 }
 

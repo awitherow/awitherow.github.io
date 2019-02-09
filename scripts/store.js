@@ -42,21 +42,21 @@ function populateStore() {
   categories.map(function(c, index) {
     var INNER = "<div class='store-category-container'>";
     INNER +=
-      "<h2>" +
+      "<h3>" +
       titleCase(c.category) +
-      "</h2><h3>" +
+      "</h3><h4>" +
       titleCase(c.desc) +
-      "</h3><div class='store-items'>";
+      "</h4><div class='store-items'>";
 
     c.items.map(function(item, index) {
       INNER +=
         "<div className='store-item index-" +
         index +
-        "'><h4><a href='" +
+        "'><h5><a href='" +
         item.link +
         "'>" +
         item.title +
-        "</a></h4><p></p></div>";
+        "</a></h5><p></p></div>";
     });
 
     INNER += "</div></div>";

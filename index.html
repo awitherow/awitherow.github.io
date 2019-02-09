@@ -1,185 +1,242 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AW | Explore Your Evolutionary Potential</title>
-    <meta name="description" content="Using ancient and modern holistic yogic techniques, I am here to help you bring about your full evolutionary potential. Ready? Dive on in.">
-    <meta name="author" content="@awitherow">
-    <meta name="keywords" content="yoga, yogi, namaste, meditation, yogasana, practiceandalliscoming, handstand, balance, esoteric, buddhism, won-buddhism, asana, yogateacher" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-    <link rel="manifest" href="manifest.json">
-    <link href="./styles/styles.css" rel="stylesheet">
-    <link href="./styles/animate.css" rel="stylesheet" type="text/css">
-    <link href="./styles/store.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
-</head>
+    <meta
+      name="description"
+      content="Using ancient and modern holistic yogic techniques, I am here to help you bring about your full evolutionary potential. Ready? Dive on in."
+    />
+    <meta name="author" content="@awitherow" />
+    <meta
+      name="keywords"
+      content="yoga, yogi, namaste, meditation, yogasana, practiceandalliscoming, handstand, balance, esoteric, buddhism, won-buddhism, asana, yogateacher"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
+    <link rel="manifest" href="manifest.json" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/animate.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/store.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-
+  <body>
     <div id="mailchimp">
-        <a href="https://awitherow.us19.list-manage.com/subscribe/post?u=c60ea29dfa8a09bdd8e0cca02&amp;id=3f3895ba76"
-            target="_blank"><i class="fa fa-envelope-open"></i></a>
+      <a
+        href="https://awitherow.us19.list-manage.com/subscribe/post?u=c60ea29dfa8a09bdd8e0cca02&amp;id=3f3895ba76"
+        target="_blank"
+        ><i class="fa fa-envelope-open"></i
+      ></a>
     </div>
 
     <div id="mobileMenu">
-        <button class="closeButton" id="closeMenu">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#store">Store</a>
-        <button data-type="" class="button consultingButton" href="#consult">Get In Touch</button>
+      <button class="closeButton" id="closeMenu">
+        <i class="fas fa-times"></i>
+      </button>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#store">Store</a>
+      <button data-type="" class="button consultingButton" href="#consult">
+        Get In Touch
+      </button>
     </div>
 
     <div id="consultingPopup">
-        <button class="closeButton" id="closeConsulting">
-            <i class="fas fa-times"></i>
-        </button>
-        <form id="consulting-form" action="https://3sy8fq80zl.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
-            method="POST">
+      <button class="closeButton" id="closeConsulting">
+        <i class="fas fa-times"></i>
+      </button>
+      <form
+        id="consulting-form"
+        action="https://3sy8fq80zl.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
+        method="POST"
+      >
+        <div style="display:none;">
+          <label>Keep this field blank</label>
+          <input type="text" name="honeypot" id="honeypot" />
+        </div>
 
-            <div style="display:none;">
-                <label>Keep this field blank</label>
-                <input type="text" name="honeypot" id="honeypot" />
-            </div>
+        <label>
+          Name:
+          <input name="contact" id="" type="text" required />
+        </label>
 
-            <label>
-                Name:
-                <input name="contact" id="" type="text" required />
-            </label>
+        <label>
+          Email:
+          <input name="from" id="" type="email" required />
+        </label>
 
-            <label>
-                Email:
-                <input name="from" id="" type="email" required />
-            </label>
+        <label>
+          Subject:
+          <select name="subject" id="consultTopic" required>
+            <option value="help" disabled selected>How Can I Help You?</option>
+            <option value="asana">Mindful Movement with Yoga or Tai Chi</option>
+            <option value="routine">Building a Routine</option>
+            <option value="meditation">Meditation</option>
+            <option value="ayp">Advanced Yoga Practices</option>
+            <option value="apps">Application or Web Development</option>
+            <option value="inquiries">Inquiries</option>
+            <option value="sponsor">Sponsorship</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
 
-            <label>
-                Subject:
-                <select name="subject" id="consultTopic" required>
-                    <option value="help" disabled selected>How Can I Help You?</option>
-                    <option value="asana">Mindful Movement with Yoga or Tai Chi</option>
-                    <option value="routine">Building a Routine</option>
-                    <option value="meditation">Meditation</option>
-                    <option value="ayp">Advanced Yoga Practices</option>
-                    <option value="apps">Application or Web Development</option>
-                    <option value="inquiries">Inquiries</option>
-                    <option value="sponsor">Sponsorship</option>
-                    <option value="other">Other</option>
-                </select>
-            </label>
+        <label>
+          Details:
+          <textarea
+            name="body"
+            id=""
+            placeholder="Hello, please use this area to fill out some info, like what brought you here, any specific questions or insights, a bit about yourself, etc. I will try to get back within 48 hours! Namaste."
+            required
+          ></textarea>
+        </label>
 
-            <label>
-                Details:
-                <textarea name="body" id="" placeholder="Hello, please use this area to fill out some info, like what brought you here, any specific questions or insights, a bit about yourself, etc. I will try to get back within 48 hours! Namaste."
-                    required></textarea>
-            </label>
-
-            <button class="button">Submit</button>
-        </form>
-        <p id="js-form-response"></p>
+        <button class="button">Submit</button>
+      </form>
+      <p id="js-form-response"></p>
     </div>
 
     <nav class="header" id="customHeader">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#store">Store</a>
+        </li>
+        <li>
+          <a data-type="" class="button consultingButton" href="#consult"
+            >Contact</a
+          >
+        </li>
+      </ul>
 
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#store">Store</a>
-            </li>
-            <li>
-                <a data-type="" class="button consultingButton" href="#consult">Contact</a>
-            </li>
-        </ul>
-
-        <button id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
+      <button id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <div class="intro">
-        <div class="description">
-            <h3>EXPLORE</h3>
-            <h4>Mind, Body, Spirit, Community, World, Universe, Self.</h4>
-        </div>
-        <div class="button-container">
-            <button data-type="" class="button primary consultingButton">Get In Touch</button>
-            <a href="#about" data-scroll class="button">About Me</a>
-        </div>
+      <div class="description">
+        <h3>EXPLORE</h3>
+        <h4>Mind, Body, Spirit, Community, World, Universe, Self.</h4>
+      </div>
+      <div class="button-container">
+        <button data-type="" class="button primary consultingButton">
+          Get In Touch
+        </button>
+        <a href="#about" data-scroll class="button">About Me</a>
+      </div>
     </div>
 
     <div id="about">
-        <div class="description"> <!-- 
+      <div class="description">
+        <!-- 
             <div class="poloroid">
                 <img src="./img/1.jpeg" />
             </div> -->
-            <div class="info">
-                <p>
-                    Hi, I'm Austin Witherow. I'm currently living on <strong>Oahu, Hawaii</strong> in <strong>Mokule'ia</strong>, running an organic farm, <a
-                        target="_blank" href="https://alohawai.farm">Alohawai Farm</a>, with my buddy Sean. I am a Hatha Yoga and Tantra instructor and teach classes on Oahu including Hatha, Kundalini, Mediation, and Yin with Reiki.
-                    </p>
+        <div class="info">
+          <p>
+            Hi, I'm Austin Witherow. I'm currently living on
+            <strong>Oahu, Hawaii</strong> in <strong>Mokule'ia</strong>, running
+            an organic farm,
+            <a target="_blank" href="https://alohawai.farm">Alohawai Farm</a>,
+            with my buddy Sean. I am a Hatha Yoga and Tantra instructor and
+            teach classes on Oahu including Hatha, Kundalini, Mediation, and Yin
+            with Reiki.
+          </p>
 
-                    <h5>Current Classes</h5>
-                    <ul>
-                        <li>Hatha and Meditation, <a href="https://yogalofthawaii.com/schedule/" target="_blank">Yoga Loft Hawaii</a> @ 7:00pm - 8:30pm, Mondays</li>
-                        <li>Sunrise Sadhana, <a href="mailto:au.witherow@gmail.com?subject=Interest in Joining Sunrise Sadhana" target="_blank">Mokule'ia Beach</a> @ 7:00am - 8:30am, Daily</li>
-                        <li>1:1 Theraptic Yin Adjustments with Reiki, <a href="mailto:au.witherow@gmail.com?subject=1:1 Yin Reiki Adjustments Interest" target="_blank">Appointment Based</a></li>
-                    </ul>
-                <p>I also am a software developer by trade, and can handle making you any sort of
-                    <strong>slick website or application</strong>. More info on that stuff in
-                    my
-                    <a href="./files/cv.pdf" target="_blank">resume</a>.
-                </p>
-            </div>
+          <h5>Current Classes</h5>
+          <ul>
+            <li>
+              Hatha and Meditation,
+              <a href="https://yogalofthawaii.com/schedule/" target="_blank"
+                >Yoga Loft Hawaii</a
+              >
+              @ 7:00pm - 8:30pm, Mondays
+            </li>
+            <li>
+              Sunrise Sadhana,
+              <a
+                href="mailto:au.witherow@gmail.com?subject=Interest in Joining Sunrise Sadhana"
+                target="_blank"
+                >Mokule'ia Beach</a
+              >
+              @ 7:00am - 8:30am, Daily
+            </li>
+            <li>
+              1:1 Theraptic Yin Adjustments with Reiki,
+              <a
+                href="mailto:au.witherow@gmail.com?subject=1:1 Yin Reiki Adjustments Interest"
+                target="_blank"
+                >Appointment Based</a
+              >
+            </li>
+          </ul>
+          <p>
+            I also am a software developer by trade, and can handle making you
+            any sort of <strong>slick website or application</strong>. More info
+            on that stuff in my
+            <a href="./files/cv.pdf" target="_blank">resume</a>.
+          </p>
         </div>
-        <ul class="social-links">
-            <li>
-                <a target="_blank" href="https://www.linkedin.com/in/austinwitherow/">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.github.com/awitherow/">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.instagram.com/lawitherow/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.patreon.com/awitherow">
-                    <i class="fab fa-patreon"></i>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.reddit.com/user/realAustinWitherow">
-                    <i class="fab fa-reddit-alien"></i>
-                </a>
-            </li>
-        </ul>
+      </div>
+      <ul class="social-links">
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/austinwitherow/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.github.com/awitherow/">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/lawitherow/">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.patreon.com/awitherow">
+            <i class="fab fa-patreon"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.reddit.com/user/realAustinWitherow"
+          >
+            <i class="fab fa-reddit-alien"></i>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div id="store">
-        <h1>Link List</h1>
-        <div id="store-list"></div>
+      <h1>Link List</h1>
+      <h2>
+        A list of items that might resonante, admittedly affiliate links, so
+        thank you if you do end up purchasing 🙏
+      </h2>
+      <div id="store-list"></div>
     </div>
 
     <footer>
-        &#169; Austin Witherow 2018
+      &#169; Austin Witherow 2018
     </footer>
 
     <!-- scripts -->
-    <script type="text/javascript" src="./scripts/scripts.js"></script><script type="text/javascript" src="./scripts/store.js"></script>
-</body>
-
+    <script type="text/javascript" src="./scripts/scripts.js"></script
+    ><script type="text/javascript" src="./scripts/store.js"></script>
+  </body>
 </html>
