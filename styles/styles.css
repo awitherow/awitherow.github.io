@@ -356,7 +356,6 @@ form button:hover {
   margin: 8px;
   letter-spacing: 8px;
   text-align: center;
-  line-height: 32px;
   font-size: 54px;
 }
 
@@ -371,9 +370,9 @@ form button:hover {
 
 @media (min-width: 768px) {
   .intro h3 {
-    line-height: 36px;
-    font-size: 120px;
-    margin-bottom: 48px;
+    line-height: 72px;
+    font-size: 82px;
+    margin-bottom: 24px;
   }
 }
 
