@@ -26,7 +26,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #2f323a;
 }
 
 html,
@@ -75,28 +74,6 @@ h4 {
   background-color: #5ecc62;
   width: 160px;
   margin: 16px 0;
-}
-
-.poloroid {
-  background: white;
-  padding: 24px;
-  max-width: 90vw;
-  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-}
-
-#about .poloroid p.caption {
-  font-family: "Permanent Marker", Courier, monospace;
-  color: black !important;
-  font-size: 16px;
-  line-height: 16px;
-  padding: 0;
-  margin: 8px 0 0 0;
-  text-align: center;
-}
-
-#about .poloroid p.caption a {
-  color: #5ecc62;
-  text-decoration: none;
 }
 
 .separator {
@@ -455,103 +432,7 @@ p .button {
   color: #2f323a;
 }
 
-#about {
-  padding: 16px;
-}
-
-#about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #353a47;
-  color: white;
-}
-
-#about img {
-  width: 240px;
-  max-width: 90vw;
-}
-
-@media (min-width: 768px) {
-  #about img {
-    margin: 0;
-  }
-}
-
-#about a {
-  color: #5ecc62;
-  padding: 2px;
-  font-weight: bold;
-}
-
-#about a:visited {
-  color: white;
-}
-
-#about .description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: justify;
-  padding: 16px 0;
-  margin: 0 auto;
-  max-width: 900px;
-}
-
-#about .description p {
-  letter-spacing: 1px;
-  color: white;
-  font-weight: 300;
-  line-height: 24px;
-  font-size: 17px !important;
-}
-
-#about .description .info {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: 16px;
-}
-
-#about .description .info h5 {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-#about .description .info ul {
-  margin: 8px 0 0 8px;
-}
-
-@media (min-width: 768px) {
-  #about {
-    padding: 64px 16px;
-  }
-
-  #about .description {
-    text-align: justify !important;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  #about .description .info {
-    padding-top: 0;
-  }
-
-  #about .description p:first-of-type {
-    margin-top: 0;
-  }
-}
-
-.about .info ul {
-  padding-left: 8px;
-}
-
 .social-links {
-  margin-top: 64px;
   list-style: none;
   padding: 0;
 }
@@ -563,10 +444,11 @@ p .button {
 
 .social-links li a i {
   font-size: 24px;
+  color: white;
 }
 
 .social-links li a:visited i {
-  color: #5ecc62;
+  color: #2f323a;
 }
 
 .social-links li a i:hover {
