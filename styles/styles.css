@@ -216,6 +216,14 @@ form button:hover {
   }
 }
 
+.section {
+  padding: 64px 0;
+}
+
+.section h1 {
+  font-size: 200%;
+}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -439,16 +447,12 @@ p .button {
   box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
-#start {
-  padding: 64px 0;
-}
-
-#start h1 {
-  font-size: 200%;
-}
-
-#start .go {
+.section .go {
   padding-top: 16px;
+}
+
+#classes {
+  background: #5ecc62 !important;
 }
 
 .social-links {
