@@ -70,7 +70,7 @@ h4 {
 }
 
 .inner {
-  max-width: 768px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -455,6 +455,39 @@ p .button {
   background: #5ecc62 !important;
 }
 
+#class-cards,
+#class-cards .card {
+  display: flex;
+}
+
+#class-cards {
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+#class-cards .card {
+  align-items: center;
+  flex-direction: column;
+  max-width: 284px;
+  margin: 8px;
+  text-align: center;
+}
+
+#class-cards .card img {
+  max-width: 200px;
+  border-radius: 100px;
+}
+
+#class-cards .card h3 {
+  font-size: 18px;
+  margin: 16px 0 8px 0;
+}
+
+#class-cards .card h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
 .social-links {
   list-style: none;
   padding: 0;
@@ -467,7 +500,7 @@ p .button {
 
 .social-links li a i {
   font-size: 24px;
-  color: white;
+  color: #5ecc62;
 }
 
 .social-links li a:visited i {
@@ -484,6 +517,4 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
-  background: #5ecc62;
 }
