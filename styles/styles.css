@@ -69,6 +69,11 @@ h4 {
   font-size: 140%;
 }
 
+.inner {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 .divider {
   height: 1px;
   background-color: #5ecc62;
@@ -211,6 +216,80 @@ form button:hover {
   }
 }
 
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.button-container .button:first-of-type {
+  margin-left: 0;
+}
+
+@media (min-width: 450px) {
+  .button-container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    justify-content: flex-start;
+  }
+}
+
+.button-container.left {
+  justify-content: flex-start;
+}
+
+.button-container.left .button {
+  margin-left: 0;
+}
+
+.button {
+  padding: 8px 16px;
+  border-width: 1px !important;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: 500 !important;
+}
+
+@media (min-width: 768px) {
+  .button.inline {
+    font-size: 28px !important;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #5ecc62;
+  border-color: #5ecc62;
+}
+
+.button.primary {
+  background: #5ecc62;
+  font-size: 16px;
+  border-color: #6bd96f;
+  font-weight: 300;
+}
+
+p .button {
+  position: relative;
+  top: -4px;
+}
+
+.button.primary:hover {
+  color: #2f323a;
+}
+
+.button-container .button {
+  margin: 8px;
+}
+
 #mobileMenu a,
 #consultingPopup a {
   color: white;
@@ -328,7 +407,7 @@ form button:hover {
   margin-top: 120px;
 }
 
-.intro h3 {
+.intro h1 {
   padding: 0;
   margin: 8px;
   letter-spacing: 8px;
@@ -336,7 +415,7 @@ form button:hover {
   font-size: 54px;
 }
 
-.intro h4 {
+.intro h2 {
   margin: 16px 8px;
   font-size: 125%;
 }
@@ -360,76 +439,16 @@ form button:hover {
   box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
+#start {
+  padding: 64px 0;
 }
 
-.button-container .button:first-of-type {
-  margin-left: 0;
+#start h1 {
+  font-size: 200%;
 }
 
-@media (min-width: 450px) {
-  .button-container {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 768px) {
-  .button-container {
-    justify-content: flex-start;
-  }
-}
-
-.button-container.left {
-  justify-content: flex-start;
-}
-
-.button-container.left .button {
-  margin-left: 0;
-}
-
-.button {
-  padding: 8px 16px;
-  margin: 8px;
-  border-width: 1px !important;
-  border: 1px solid white;
-  border-radius: 24px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-weight: 500 !important;
-}
-
-@media (min-width: 768px) {
-  .button.inline {
-    font-size: 28px !important;
-  }
-}
-
-.button:hover {
-  cursor: pointer;
-  color: #5ecc62;
-  border-color: #5ecc62;
-}
-
-.button.primary {
-  background: #5ecc62;
-  font-size: 16px;
-  border-color: #6bd96f;
-  font-weight: 300;
-}
-
-p .button {
-  position: relative;
-  top: -4px;
-}
-
-.button.primary:hover {
-  color: #2f323a;
+#start .go {
+  padding-top: 16px;
 }
 
 .social-links {
