@@ -449,9 +449,19 @@ p .button {
   padding-top: 16px;
 }
 
+.section .go .button {
+  color: white;
+  border-color: white;
+}
+
+.section .go .button:hover {
+  color: #2f323a;
+  border-color: #2f323a;
+}
+
 #paths {
   background: #5ecc62;
-  color: white !important;
+  color: #353a47 !important;
 }
 
 .purchases .option {
