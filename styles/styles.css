@@ -92,14 +92,12 @@ h4 {
   background: #353a47;
 }
 
-#mobileMenu,
-#consultingPopup {
+.popup {
   display: none;
   z-index: 2;
 }
 
-#mobileMenu.shown,
-#consultingPopup.shown {
+.popup.shown {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -217,7 +215,7 @@ form button:hover {
 }
 
 .section {
-  padding: 64px 0;
+  padding: 64px 16px;
 }
 
 .section h1 {
