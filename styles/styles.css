@@ -31,7 +31,7 @@ body {
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 body.noScroll {
@@ -296,17 +296,17 @@ p .button {
   margin: 8px;
 }
 
-#mobileMenu a,
-#consultingPopup a {
+.popup a,
+.popup button {
   color: white;
   text-decoration: none;
   padding: 8px;
   font-size: 24px;
+  border: none;
 }
 
-#mobileMenu .closeButton,
-#consultingPopup .closeButton {
-  position: absolute;
+.popup .closeButton {
+  position: fixed;
   z-index: 2;
   top: 24px;
   right: 24px;
@@ -449,8 +449,15 @@ p .button {
   padding-top: 16px;
 }
 
-#classes {
-  background: #5ecc62 !important;
+#paths {
+  background: #5ecc62;
+  color: white !important;
+}
+
+.purchases .option {
+  background: rgba(225, 225, 225, 0.07);
+  margin: 16px 0;
+  padding: 8px;
 }
 
 #class-cards,
@@ -498,11 +505,11 @@ p .button {
 
 .social-links li a i {
   font-size: 24px;
-  color: #5ecc62;
+  color: #2f323a;
 }
 
 .social-links li a:visited i {
-  color: #2f323a;
+  color: white;
 }
 
 .social-links li a i:hover {
@@ -510,6 +517,7 @@ p .button {
 }
 
 footer {
+  background: #5ecc62;
   padding: 24px;
   display: flex;
   align-items: center;

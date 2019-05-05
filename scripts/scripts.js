@@ -18,11 +18,9 @@
   // mobile menu event listeners
   // includes closeButton and all links that are clickable
   var c = document.getElementById("mobileMenu").childNodes;
-  // TODO: get fancy and add an array 1-11, odd only numbers to show off to people snooping code.
-  var n = [c[1], c[3], c[5], c[7]];
 
-  for (var i = 0; i < n.length; i++) {
-    n[i].addEventListener("click", closeMenu);
+  for (var i = 0; i < c.length; i++) {
+    c[i].addEventListener("click", closeMenu);
   }
 
   // consulting buttons scattered throughout the page.
