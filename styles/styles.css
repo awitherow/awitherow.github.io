@@ -418,7 +418,7 @@ p .button {
   margin: 8px;
   letter-spacing: 8px;
   text-align: center;
-  font-size: 54px;
+  font-size: 32px;
 }
 
 .intro h2 {
@@ -431,6 +431,9 @@ p .button {
 }
 
 @media (min-width: 768px) {
+  .intro h1 {
+    font-size: 54px;
+  }
   .intro h3 {
     line-height: 72px;
     font-size: 82px;
@@ -464,7 +467,17 @@ p .button {
   color: #353a47 !important;
 }
 
-.purchases .option {
+#paths .quick-jump {
+  padding-left: 0;
+  text-align: center;
+  margin: 32px auto;
+}
+
+#paths .quick-jump li {
+  display: inline-block;
+}
+
+#paths-container .path {
   background: rgba(225, 225, 225, 0.07);
   margin: 16px 0;
   padding: 8px;
