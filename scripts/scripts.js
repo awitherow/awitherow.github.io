@@ -190,7 +190,7 @@ function removeEmpties(obj) {
       ],
       link: {
         href: "https://forms.gle/apJxLZKFZmjxeMaSA",
-        text: "Start Your Journey",
+        text: "Let's Start Yoga",
       },
     },
     {
@@ -201,7 +201,7 @@ function removeEmpties(obj) {
       features: [
         "Discover What Your Body Needs",
         "Deep Relaxing Breathwork",
-        "Personalised Sensually Healing Restorative Yoga Flow",
+        "Personalised Healing Restorative Yoga Flow",
         "Gentle Hands on Reiki, and Therapeutic Realignment Adjustments",
         "Guided Meditation for Deep Relaxation and Healing",
       ],
@@ -224,7 +224,7 @@ function removeEmpties(obj) {
       ],
       link: {
         href: "https://forms.gle/7dyNLiZc1UCdEhZA8",
-        text: "Course Interest Form",
+        text: "Interest Form",
       },
     },
   ];

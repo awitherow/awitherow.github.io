@@ -16,8 +16,8 @@ body {
 
 html,
 body {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 body.noScroll {
@@ -29,12 +29,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 a,
 p {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 button {
@@ -206,12 +206,16 @@ form button:hover {
 }
 
 .section h1 {
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .section h2 {
-  font-size: 110%;
+  font-size: 125%;
   font-weight: bold;
+}
+.section p,
+.section ul {
+  font-size: 115%;
 }
 
 .section ul {
@@ -425,12 +429,12 @@ p .button {
   padding: 0;
   margin: 8px;
   text-align: center;
-  font-size: 32px;
+  font-size: 48px;
 }
 
 .intro h2 {
   margin: 8px;
-  font-size: 125%;
+  font-size: 140%;
 }
 
 .intro .button-container {
