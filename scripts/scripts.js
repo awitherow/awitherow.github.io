@@ -193,23 +193,23 @@ function removeEmpties(obj) {
         text: "Let's Start Yoga",
       },
     },
-    {
-      id: "therapy",
-      title: "1:1 Therapeutic Restorative Yoga w/ Reiki",
-      description:
-        "A Private Soothing Restorative Yoga Flow with the Healing Power of Reiki and Hands on Realignment Therapy",
-      features: [
-        "Discover What Your Body Needs",
-        "Deep Relaxing Breathwork",
-        "Personalised Healing Restorative Yoga Flow",
-        "Gentle Hands on Reiki, and Therapeutic Realignment Adjustments",
-        "Guided Meditation for Deep Relaxation and Healing",
-      ],
-      link: {
-        href: "https://forms.gle/msGWwpS3yBTHMNf49",
-        text: "Start Healing",
-      },
-    },
+    // {
+    //   id: "therapy",
+    //   title: "1:1 Therapeutic Restorative Yoga w/ Reiki",
+    //   description:
+    //     "A Private Soothing Restorative Yoga Flow with the Healing Power of Reiki and Hands on Realignment Therapy",
+    //   features: [
+    //     "Discover What Your Body Needs",
+    //     "Deep Relaxing Breathwork",
+    //     "Personalised Healing Restorative Yoga Flow",
+    //     "Gentle Hands on Reiki, and Therapeutic Realignment Adjustments",
+    //     "Guided Meditation for Deep Relaxation and Healing",
+    //   ],
+    //   link: {
+    //     href: "https://forms.gle/msGWwpS3yBTHMNf49",
+    //     text: "Start Healing",
+    //   },
+    // },
     {
       id: "online",
       title: "'Movement in Stillness' Self Paced Course",

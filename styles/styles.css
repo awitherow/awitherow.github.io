@@ -24,12 +24,20 @@ body.noScroll {
   overflow: hidden;
 }
 
-h1,
+h1 {
+  font-weight: 300;
+}
+
 h2,
 h3,
 h4,
 h5 {
   font-weight: 500;
+  font-size: 150%;
+}
+
+h4 {
+  font-size: 140%;
 }
 
 a,
@@ -43,18 +51,6 @@ button {
   border-width: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-size: 150%;
-}
-
-h4 {
-  font-size: 140%;
-}
-
 .inner {
   max-width: 900px;
   margin: 0 auto;
@@ -65,17 +61,6 @@ h4 {
   background-color: #5ecc62;
   width: 160px;
   margin: 16px 0;
-}
-
-.separator {
-  background: #5ecc62;
-  width: 100px;
-  height: 2px;
-  margin: 4px 0;
-}
-
-.separator.dark {
-  background: #353a47;
 }
 
 .popup {
@@ -98,6 +83,25 @@ h4 {
   flex-direction: column;
 
   overflow-y: scroll;
+}
+
+.popup a,
+.popup button {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 24px;
+  border: none;
+}
+
+.popup .closeButton {
+  position: fixed;
+  z-index: 2;
+  top: 24px;
+  right: 24px;
+  font-size: 24px;
+  color: white;
+  box-shadow: none;
 }
 
 #mailchimp {
@@ -125,18 +129,6 @@ h4 {
 
 #mailchimp a:hover i {
   color: black;
-}
-
-@media (min-width: 768px) {
-  #mailchimp label {
-    margin-bottom: 0;
-    margin-right: 8px;
-  }
-}
-
-#mailchimp #consultingPopup.shown {
-  padding-top: 80px;
-  justify-content: flex-start;
 }
 
 form {
@@ -200,6 +192,20 @@ form button:hover {
   }
 }
 
+.section .go {
+  padding-top: 16px;
+}
+
+.section .go .button {
+  color: white;
+  border-color: white;
+}
+
+.section .go .button:hover {
+  color: #2f323a;
+  border-color: #2f323a;
+}
+
 .section {
   padding: 32px 16px;
   text-align: center;
@@ -213,6 +219,7 @@ form button:hover {
   font-size: 125%;
   font-weight: bold;
 }
+
 .section p,
 .section ul {
   font-size: 115%;
@@ -223,12 +230,12 @@ form button:hover {
 }
 
 @media (min-width: 768px) {
-  .section h1 {
-    font-size: 200%;
-  }
-
   .section {
     text-align: left;
+  }
+
+  .section h1 {
+    font-size: 200%;
   }
 }
 
@@ -244,6 +251,14 @@ form button:hover {
   margin-left: 0;
 }
 
+.button-container.left {
+  justify-content: flex-start;
+}
+
+.button-container.left .button {
+  margin-left: 0;
+}
+
 @media (min-width: 450px) {
   .button-container {
     flex-direction: row;
@@ -256,12 +271,8 @@ form button:hover {
   }
 }
 
-.button-container.left {
-  justify-content: flex-start;
-}
-
-.button-container.left .button {
-  margin-left: 0;
+.button-container .button {
+  margin: 8px;
 }
 
 .button {
@@ -273,12 +284,6 @@ form button:hover {
   text-align: center;
   font-weight: 700 !important;
   text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .button.inline {
-    font-size: 28px !important;
-  }
 }
 
 .button:hover {
@@ -294,49 +299,36 @@ form button:hover {
   font-weight: 300;
 }
 
+.button.primary:hover {
+  color: #2f323a;
+}
+
 p .button {
   position: relative;
   top: -4px;
 }
 
-.button.primary:hover {
-  color: #2f323a;
-}
-
-.button-container .button {
-  margin: 8px;
-}
-
-.popup a,
-.popup button {
-  color: white;
-  text-decoration: none;
-  padding: 8px;
-  font-size: 24px;
-  border: none;
-}
-
-.popup .closeButton {
-  position: fixed;
-  z-index: 2;
-  top: 24px;
-  right: 24px;
-  font-size: 24px;
-  color: white;
-  box-shadow: none;
-}
-
 .header {
   position: absolute;
   padding: 24px;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+}
+
+.header .right {
+  margin-left: auto;
 }
 
 .header h1 {
   color: white;
+  font-weight: 500;
+}
+
+.header h2 {
+  font-size: 100%;
 }
 
 .header h2,
@@ -346,18 +338,35 @@ p .button {
   color: white;
 }
 
-.header h1 {
-  font-weight: 500;
-}
-
-.header h2 {
-  font-size: 100%;
-}
-
 .header ul {
   display: none;
   list-style: none;
-  margin-left: auto;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: right;
+
+  text-transform: uppercase !important;
+}
+
+.header ul li {
+  display: inline;
+  padding-right: 24px;
+}
+
+.header ul li:last-of-type {
+  padding-right: 0;
+}
+
+.header ul li a {
+  text-decoration: none;
+}
+
+.header ul li a:hover {
+  color: #5ecc62;
+}
+
+.header a.button {
+  padding: 8px 16px;
 }
 
 .header #hamburger {
@@ -382,24 +391,39 @@ p .button {
   }
 }
 
-.header ul li {
-  display: inline;
-  padding-right: 24px;
+.social-links {
+  list-style: none;
+  padding: 0;
 }
 
-.header ul li a {
-  text-decoration: none;
+.social-links li {
+  display: inline-block;
+  padding: 8px !important;
 }
 
-.header ul li a:hover {
-  color: #5ecc62;
+.social-links li a i {
+  font-size: 16px;
+  color: #2f323a;
 }
 
-.header a.button {
-  padding: 8px 16px;
+.social-links li a:visited i {
+  color: white;
 }
 
-.intro {
+.social-links li a i:hover {
+  color: #fff200;
+}
+
+footer {
+  background: #5ecc62;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#intro {
   height: 100vh;
   background: url("../img/bg-dark.jpg") no-repeat center center fixed;
 
@@ -420,56 +444,41 @@ p .button {
   text-align: center;
 }
 
-.intro .description {
+#intro .description {
   margin-top: 120px;
 }
 
-.intro h1 {
+#intro h1 {
   padding: 0;
   margin: 8px;
   text-align: center;
   font-size: 48px;
 }
 
-.intro h2 {
+#intro h2 {
   margin: 8px;
   font-size: 140%;
 }
 
-.intro .button-container {
+#intro .button-container {
   flex-direction: row;
 }
 
-@media (min-width: 768px) {
-  .intro h1 {
-    font-size: 54px;
-  }
-  .intro h3 {
-    line-height: 72px;
-    font-size: 82px;
-    margin-bottom: 24px;
-  }
-}
-
-.intro .button-container button,
-.intro .button-container a {
+#intro .button-container .button {
   font-size: 80% !important;
   letter-spacing: 1px;
   box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
-.section .go {
-  padding-top: 16px;
-}
-
-.section .go .button {
-  color: white;
-  border-color: white;
-}
-
-.section .go .button:hover {
-  color: #2f323a;
-  border-color: #2f323a;
+@media (min-width: 768px) {
+  #intro h1 {
+    font-size: 54px;
+  }
+  #intro h3 {
+    line-height: 72px;
+    font-size: 82px;
+    margin-bottom: 24px;
+  }
 }
 
 #paths {
@@ -497,36 +506,4 @@ p .button {
 
 #paths-container .path ul {
   padding-left: 24px;
-}
-
-.social-links {
-  list-style: none;
-  padding: 0;
-}
-
-.social-links li {
-  display: inline-block;
-  padding: 8px;
-}
-
-.social-links li a i {
-  font-size: 24px;
-  color: #2f323a;
-}
-
-.social-links li a:visited i {
-  color: white;
-}
-
-.social-links li a i:hover {
-  color: #fff200;
-}
-
-footer {
-  background: #5ecc62;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
