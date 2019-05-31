@@ -210,23 +210,23 @@ function removeEmpties(obj) {
     //     text: "Start Healing",
     //   },
     // },
-    {
-      id: "online",
-      title: "'Movement in Stillness' Self Paced Course",
-      description:
-        "Integrate ancient and modern yogic theory and practice into your lifestyle to find Stillness in the Movements of Life, and the Movement in within your Stillness.",
-      features: [
-        "Learn Yoga beyond Āsana",
-        "Connect Deeply with Your Life Experience",
-        "Discover the Power of Breath",
-        "Find Deep Silence with Meditation",
-        "Discover Alignment with Your Truth",
-      ],
-      link: {
-        href: "https://forms.gle/7dyNLiZc1UCdEhZA8",
-        text: "Interest Form",
-      },
-    },
+    // {
+    //   id: "online",
+    //   title: "'Movement in Stillness' Self Paced Course",
+    //   description:
+    //     "Integrate ancient and modern yogic theory and practice into your lifestyle to find Stillness in the Movements of Life, and the Movement in within your Stillness.",
+    //   features: [
+    //     "Learn Yoga beyond Āsana",
+    //     "Connect Deeply with Your Life Experience",
+    //     "Discover the Power of Breath",
+    //     "Find Deep Silence with Meditation",
+    //     "Discover Alignment with Your Truth",
+    //   ],
+    //   link: {
+    //     href: "https://forms.gle/7dyNLiZc1UCdEhZA8",
+    //     text: "Interest Form",
+    //   },
+    // },
   ];
 
   var container = document.getElementById("paths-container");
